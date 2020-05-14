@@ -3,7 +3,7 @@ require_once 'login.php';
 require_once 'connect.php';
     
 //class User holds the functionality of returning and processing basic userdetails such as name, surname, age and gender
-class Person
+class Client
 {
     private $name = null;
     private $surname = null;
