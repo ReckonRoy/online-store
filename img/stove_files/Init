@@ -1,0 +1,44 @@
+if (typeof window.ChannelSight_Separator === "undefined" || (window.ChannelSight_Separator !== "." && window.ChannelSight_Separator !== ","))
+    window.ChannelSight_Separator = ".";
+
+if (typeof window.ChannelSight_Type === "undefined")
+    window.ChannelSight_Type = "UrlTracking";
+
+var ChannelSight_Url = "https://tracking.channelsight.com/api/tracking/v2/";
+
+function channelsight_init() {
+    var r = document.getElementsByTagName("head")[0];
+    var i = document.createElement("script");
+    i.type = "text/javascript";
+    i.src = window.ChannelSight_Url + (window.ChannelSight_Type == null ? 'UrlTracking' : window.ChannelSight_Type) +
+        "?decimalseparator=" + window.ChannelSight_Separator +
+        "&domain=" + (typeof window.ChannelSight_Domain !== "undefined" ? window.ChannelSight_Domain : "") +
+        "&test=" + (typeof window.ChannelSight_IsTest !== "undefined" ? window.ChannelSight_IsTest : "false");
+    r.appendChild(i);
+    if (typeof window.ChannelSight_LoadCallback === "function") i.onload = i.onreadystatechange = window.ChannelSight_LoadCallback;
+}
+
+function ChannelSight_Interframe(event) {
+    document.cookie = "channelsight_transaction=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+    document.cookie = "channelsight_transaction=" + event.data;
+    channelsight_init(window.ChannelSight_Type, window.ChannelSight_Separator, window.ChannelSight_LoadCallback);
+}
+
+function channelsight_indirect_init() {
+    Window.ChannelSight = window.ChannelSight || {};
+    if (window.addEventListener) {
+        addEventListener("message", ChannelSight_Interframe, false);
+    } else {
+        attachEvent("onmessage", ChannelSight_Interframe);
+    }
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", ChannelSight_Url + "Indirect");
+    ifrm.style = "width: 0px; height: 1px; display: none; visibility: hidden";
+    document.body.appendChild(ifrm);
+}
+
+if (window.ChannelSight_IsIndirect) {
+    channelsight_indirect_init();
+} else {
+    channelsight_init();
+}
