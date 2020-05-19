@@ -19,6 +19,12 @@ header, footer, nav, section, article, aside
     margin: 0;
 }
 
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
 #container
 {
     border: 1px solid black;
@@ -63,9 +69,82 @@ header, footer, nav, section, article, aside
 /*--------------------------------Section Section------------------------------------------------------------------------------*/
 #section
 {
-    width: 80%;
+    width: 70%;
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 9%;
     float: right;
+}
+.products{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+}
+.product
+{
+    border: 1px solid black;
+    padding: 10px 10px;
+}
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------Starting the aside styling-----------------------------------------------------*/
+.aside
+{
+    border: 1px solid black;
+    width: 25%;
+    display: inline-block;
+    margin-top: 9%;
+}
+
+#cart
+{
+    border: 1px solid green;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#cart_header
+{
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#content
+{
+    width: 100%;
+    border: 1px solid orange;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#cart_icon
+{
+   display: inline-block;
+    background-image: url("../img/cart_icon.jpg");
+    width: 25px;
+    height: 25px;
+    float: left;
+    border: 1px solid blue;
+}            
+#cart_quantity
+{
+    display: inline-block;
+    width: 20px;
+    border: 1px solid purple;
+    border-radius: 1.5em;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+#cart_total
+{
+    display: inline-block;
+    border: 1px solid red;
+    float: right;
+    margin-top: 2%;
+}
+.clrf
+{
+    clear: both;
 }

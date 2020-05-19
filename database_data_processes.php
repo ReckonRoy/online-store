@@ -13,7 +13,7 @@
  */
 class database_data_processes
 {
-    public function addAccount($conn, $person, $user_det, $region)
+    public function createAccount($conn, $person, $user_det, $region)
     {
         if($conn -> connect_error)
         {
@@ -28,8 +28,8 @@ class database_data_processes
             if($result->num_rows == 0)
             {
                 //go ahead and insert user details
-                $sql_person = "INSERT INTO user(name, surname, dob, gender) VALUES('$person->getName()', '$person->getSurname()', '$person->getDob()', '$person->getGender()'))";
-                $sql_user_det = "INSERT INTO user_details(id, name, surname, age, gender) VALUES('$user_det->getId()', '$user_det->getUsername()', '$user_det->getPassword()', '$user_det->getEmail'))";
+                $sql_person = "INSERT INTO client(name, surname, dob, gender) VALUES('$person->getName()', '$person->getSurname()', '$person->getDob()', '$person->getGender()'))";
+                $sql_user_det = "INSERT INTO client_details(id, username, email, password) VALUES('$user_det->getId()', '$user_det->getUsername()', '$user_det->getPassword()', '$user_det->getEmail'))";
                 $sql_region = "INSERT INTO user(name, surname, age, gender) VALUES('$region->getCountry()', '$region->getCity()', '$region->getZipCode()', '$region->getAddress'))";
 
                 $result_person = $conn -> query($sql_person);

@@ -48,7 +48,7 @@ and open the template in the editor.
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
                 <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
-                <article>
+                <article class="products">
                     <div class="product">
                         <!-- product image -->
                         <div>
@@ -57,8 +57,14 @@ and open the template in the editor.
                     </div>
                     
                     <div class="product">
-                        <div>
+                        <div id="pr_img">
                             <img src="img/plasma.png" alt="">
+                        </div>
+                        <div id="pr_title">
+                            <a href="product.php">Wide screen plasma tv,<br> dimensions 1000 * 1000</a>
+                        </div>
+                        <div>
+                            R1,500
                         </div>
                     </div>
                     
@@ -80,13 +86,20 @@ and open the template in the editor.
                         </div>
                     </div>
                 </article>
-                
-                <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
-                <aside>
-                    
-                </aside>
             </section>
 <!---------------------------------------------End section ------------------------------------------------------------------->
+            <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
+            <aside class="aside">
+                <div id="cart">
+                    <div id="cart_header"><h2>Shopping Cart</h2></div>
+                    <div id="content">
+                        <div id="cart_icon"></div>
+                        <div id="cart_quantity">5</div>
+                        <div id="cart_total">total R1,200</div>
+                    </div>
+                </div>
+            </aside>
+            <div class="clrf"></div>
         </div>
     </body>
 </html>
