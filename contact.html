@@ -6,9 +6,10 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Contact Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/contact.css" type="text/css">
     </head>
     <body>
         <!----------------------------------------------Container Div--------------------------------------------------------------->
@@ -38,13 +39,27 @@ and open the template in the editor.
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="login.html">Sign In<a/></li>
+                        <li><a href="login.html">Sign In</a></li>
                     </ul>
                 </nav>
             </header>
 <!----------------------------------------------End header section----------------------------------------------------------->
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
+                <div class="contact_form">
+                    <form>
+                        <div id="name_div"><input type="text" placeholder="Name..." name="name"></div><div id="email_div"><input type="email" placeholder="Email..." name="email"></div>
+                        <div id="address_div"><input type="text" placeholder="Address..." id="address_field" name="address"></div>
+                        <div id="message_div">
+                            <textarea cols="100" rows="15" name="message" placeholder="Type your message here...">
+                                
+                            </textarea>
+                        </div>
+                        
+                        <div id="button_div"><input type="button" value="Send message" name="name"></div>
+                    </form>
+                </div>
+                   
             </section>
 
         </div>

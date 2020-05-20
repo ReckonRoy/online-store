@@ -28,7 +28,7 @@ body
 #container
 {
     border: 1px solid black;
-    width: 100%;
+    width: 95%;
 }
 /*HEADER SECTION---------------------------------------------------------------------------------------------------------------------*/
 #header
@@ -73,4 +73,76 @@ body
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 9%;
+}
+/*Contact form*/
+.contact_form
+{
+    width: 100%;
+    border: 1px solid black;
+}
+
+#name_div
+{
+    width: 45%;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 2.5%;
+    margin-bottom: 3%;
+}
+
+#email_div
+{
+    width: 45%;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+#address_div
+{
+    width: 95%;
+    border: 1px solid black;
+    margin-left: 2.5%;
+    margin-bottom: 3%;
+}
+
+#message_div
+{
+    width: 95%;
+    border: 1px solid black;
+    margin-left: 2.5%;
+    margin-bottom: 3%;
+}
+
+.contact_form input[type=text]
+{
+    width: 95%;
+    padding: 10px;
+    height: 20px;
+}
+
+.contact_form input[type=email]
+{
+    width: 94%;
+    padding: 10px;
+    height: 20px;
+}
+
+#address_field
+{
+    width: 97.5%;
+    padding: 10px;
+    height: 20px;
+}
+
+#button_div
+{
+    border: 1px solid black;
+    text-align: right;
+}
+
+input[type=button]
+{
+    padding: 10px;
+    color: blue;
 }
