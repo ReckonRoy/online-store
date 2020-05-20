@@ -6,10 +6,10 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Contact Us</title>
+        <title>About Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/contact.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/about.css">
     </head>
     <body>
         <!----------------------------------------------Container Div--------------------------------------------------------------->
@@ -31,6 +31,14 @@ and open the template in the editor.
                         </form>
                     </div>
                     <!-- close search bar div-->
+                    
+                    <div id="cart">
+                        <div id="content">
+                            <div id="cart_icon"></div>
+                            <div id="cart_quantity">5</div>
+                            <div id="cart_total">total R1,200</div>
+                        </div>
+                    </div>
                 </div>    
                 
                 <!-- Nav -->
@@ -39,29 +47,21 @@ and open the template in the editor.
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="login.html">Sign In</a></li>
+                        <li><a href="login.html">Sign In<a/></li>
                     </ul>
                 </nav>
             </header>
 <!----------------------------------------------End header section----------------------------------------------------------->
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
-                <div class="contact_form">
-                    <form>
-                        <div id="name_div"><input type="text" placeholder="Name..." name="name"></div><div id="email_div"><input type="email" placeholder="Email..." name="email"></div>
-                        <div id="address_div"><input type="text" placeholder="Address..." id="address_field" name="address"></div>
-                        <div id="message_div">
-                            <textarea cols="70" rows="15" name="message" placeholder="Type message here...">
-                                
-                            </textarea>
-                        </div>
-                        
-                        <div id="button_div"><input type="button" value="Send message" name="name"></div>
-                    </form>
+                <div id="team">
+                    <p><img src="img/leroy.jpg" class="align-left medium" alt="web developer leroy">
+                    Le-Roy Studied full stack web-development at the Code Space institution
+                    <br>He is the lead developer for this project.</p>
+                <div id="clrf"></div>
                 </div>
-                   
+                
             </section>
-
         </div>
     </body>
 </html>
