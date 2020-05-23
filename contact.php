@@ -11,7 +11,22 @@
  *
  * @author le-roy
  */
-class contact
+
+if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['address']) && isset($_POST['message']))
+{
+    if(!empty($_POST['name']) && !empty($_POST['name']) && !empty($_POST['name']) && !empty($_POST['name']))
+    {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $message = $_POST['message'];
+        
+        $contactObject = new Contact($name, $email, $address, $message);
+        echo $contactObject ->getName();
+    }
+}
+
+class Contact
 {
     private $name;
     private $email;
@@ -23,8 +38,27 @@ class contact
         $this -> name = $name;
         $this -> email = $email;
         $this -> address = $address;
-        $this -> message = $message;
-        
+        $this -> message = $message;   
+    }
+    
+    public function getName()
+    {
+        return $this -> name;
+    }
+    
+    public function getEmail()
+    {
+        return $this -> email;
+    }
+    
+    public function getAddress()
+    {
+        return $this -> address;
+    }
+    
+    public function getMessage()
+    {
+        return $this -> message;
     }
 }
 
@@ -35,9 +69,14 @@ class contact
     
     <form action="contact.php" method="post">
         <input type="text" name="name" placeholder="Name...">
-        <input type="text" name="name" placeholder="Email...">
-        <input type="text" name="name" placeholder="Address...">
-        <textarea cols="20" rows="10" name="message">
+        <br>
+        <input type="text" name="email" placeholder="Email...">
+        <br>
+        <input type="text" name="address" placeholder="Address...">
+        <br>
+        <textarea cols="20" rows="10" name="message" placeholder="Message..."></textarea>
+        <br>
+        <input type="submit" value="send">
     </form>
     
 </body>
