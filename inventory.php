@@ -72,7 +72,10 @@ class Inventory
         $conn -> close();
     }//end method getAllProducts
     
+    //***************************************************************************************************************************
+    
     //method searchByCategory queries the database by passing the string parameter
+    
     public function searchByCategory($conn, $string)
     {
         $query = "SELECT product_name, product_price, pr_description, image FROM inventory WHERE category = '".$string."'";
