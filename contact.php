@@ -11,18 +11,23 @@
  *
  * @author le-roy
  */
+require 'sanitizeInput.php';
+require_once 'login.php';
+$connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
+$sanitizeObject = new SanitizeInput();
 
 if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['address']) && isset($_POST['message']))
 {
     if(!empty($_POST['name']) && !empty($_POST['name']) && !empty($_POST['name']) && !empty($_POST['name']))
     {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $address = $_POST['address'];
-        $message = $_POST['message'];
+        $name = $sanitizeObject ->mysqlStringLiteral($connection, $_POST['name']);
+        $email = $sanitizeObject ->mysqlStringLiteral($connection, $_POST['email']);
+        $address = $sanitizeObject ->mysqlStringLiteral($connection, $_POST['address']);
+        $message = $sanitizeObject ->mysqlStringLiteral($connection, $_POST['message']);
         
         $contactObject = new Contact($name, $email, $address, $message);
-        echo $contactObject ->getName();
+        echo $contactObject ->getEmail();
+        
     }
 }
 
@@ -32,7 +37,9 @@ class Contact
     private $email;
     private $address;
     private $message;
-    
+    /*
+     * class Contact constructor initialises private properties
+     */
     function __construct($name, $email, $address, $message)
     {
         $this -> name = $name;
@@ -41,6 +48,9 @@ class Contact
         $this -> message = $message;   
     }
     
+    /*
+     * public getter methods to retrieve values from private properties
+     */
     public function getName()
     {
         return $this -> name;
@@ -60,6 +70,31 @@ class Contact
     {
         return $this -> message;
     }
+    
+    /*
+     * the following section manages communication with database
+     * That is insert and select operations operations
+     * once data has been inserted a suucess message is returned otherwise we error message is returned
+     */
+    
+    public function getId($conn)
+    {
+        $query = "SELECT id FROM client_details WHERE username = '".$username."'";
+        $result = $conn -> query($query);
+        if($result)
+        {
+            if($result -> num_rows != 0)
+            {
+                $row_id = $result -> fetch_assoc(); 
+                return $row_id['id'];
+
+            }    
+        } else {
+            echo "Sorry we are experiencing some technical issues";
+        }
+    }
+    
+    
 }
 
 ?>
