@@ -48,6 +48,22 @@ body
     text-align: right;
 }
 
+#search_div input[type=text]
+{
+    padding: 10px 10px;
+    width: 400px;
+}
+#select
+{
+    padding: 10px 10px;
+}
+
+#search_btn
+{
+    padding: 8px 8px;
+    width: 100px;
+}
+
 #cart
 {
     border: 1px solid green;
@@ -158,13 +174,62 @@ body
 /*-------------------------------------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------Starting the aside styling-----------------------------------------------------*/
-.aside
-{
-    border: 1px solid black;
-    width: 28%;
-    display: inline-block;
-    margin-top: 15%;
-}
+
+        .aside{
+            border: 1px solid black;
+            width: 28%;
+            display: inline-block;
+            margin-top: 15%;
+        }
+        
+        .loginField
+        {
+            width: 90%;
+            padding: 10px 10px;
+            margin: 0px auto;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            
+        }
+        
+        #btn_l_field
+        {
+            width: 90%;
+            padding: 10px 10px;
+            margin: 0px auto;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        
+        .loginField input[type=text]
+        {
+            padding: 10px;
+            width: 330px;
+        }
+        
+        .loginField input[type=password]
+        {
+            padding: 10px;
+            width: 330px; 
+        }
+        
+        input[type=submit]
+        {
+            padding: 5px;
+            width: 100px;
+        }
+        
+        #misc
+        {
+            width: 90%;
+            margin: 0px auto;
+            margin-top: 50px;
+            border: 1px solid black;
+            line-height: 2.5em;
+            padding-top: 5px;
+            height: 100px;
+        }
+
 .clrf
 {
     clear: both;

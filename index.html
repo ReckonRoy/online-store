@@ -27,8 +27,12 @@ and open the template in the editor.
                     <!-- search bar div-->
                     <div id="search_div">
                         <form>
-                            <input type="text" placeholder="Type here to search products..." name="search" size="80">
-                            <button>search</button>
+                            <select name="type_search" id="select">
+                                <option value="category">CATEGORY</option>
+                                <option value="product_name">PRODUCT NAME</option>
+                            </select>
+                            <input type="text" placeholder="Type here to search products..." name="search">
+                            <button id="search_btn">search</button>
                         </form>
                     </div>
                     <!-- close search bar div-->
@@ -75,13 +79,31 @@ and open the template in the editor.
             </section>
 <!---------------------------------------------End section ------------------------------------------------------------------->
             <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
-            <aside class="aside">
-                
-            </aside>
-            <div class="clrf"></div>
+            <div class="aside">
+            <form action="accountLogin.php" method="POST">
+                <div class="loginField">
+                    <input type="text" name="username" placeholder="Username...">
+                </div>
+
+                <div class="loginField">
+                    <input type="password" name="password" placeholder="Password...">
+                </div>
+
+                <div id="btn_l_field">
+                    <input type="submit" value="LOGIN">
+                </div>
+                <div id="misc">
+                    <center><p>Don't have an account? <span><a href="register.html">Sign Up</a></span></p></center>
+                    <center><p><a href="recovery.php">Forgot your password?</a></p></center>
+                </div>
+            </form>
+        </div>
+            
+        <div class="clrf"></div>
         </div>
 
         <script type="text/javascript" src="script/vue.js"></script>
         <script type="text/javascript" src="script/main.js"></script>
+        <script type="text/javascript" src="script/login.js"></script>
     </body>
 </html>
