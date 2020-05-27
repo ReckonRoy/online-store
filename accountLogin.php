@@ -20,10 +20,13 @@ if(isset($_POST['username']) && isset($_POST['password']))
     {
         $username = $_POST['username'];
         $password = $_POST['password'];
-        
         $loginObject = new accountLogin($username, $password);
         $loginObject -> login($connection);
+}else{
+    echo json_encode([false, "empty fields detected"]);
     }
+} else {
+    echo json_encode([false, "empty fields detected"]);
 }
 class accountLogin
 {
@@ -50,7 +53,7 @@ class accountLogin
     {
         if($conn -> connect_error)
         {
-            exit("Sorry we could not establish a connection to the database");
+            //exit(json_encode([false, "Sorry we could not establish a connection to the database"]));
         }
         
         $query = "SELECT id FROM client_details WHERE username = '".$this->getUsername()."' AND password = '".$this->getPassword()."'";
@@ -71,105 +74,26 @@ class accountLogin
                     {
                         while($each_row = $result -> fetch_assoc())
                         {
-                            $name = $each_row['name'];
-                            $surname = $each_row['surname'];
-                            
+                             
                             session_start();
-                            $_SESSION[$name];
-                            $_SESSION[$surname];
+                            $user_n = $each_row['name'];
+                            $user_s = $each_row['surname'];
+                            $_SESSION[$user_n];
+                            $_SESSION[$user_s];
+                           
                         }
                     }else{
-                        echo 'technical error';
+                        //echo json_encode([ false, 'technical error' ]);
                     }
                 } else {
-                    echo "There seem to be an error with the connection";
+                    echo json_encode([false, 'There seem to be an error with the connection']);
                 }
             }else{
-                echo 'invalid username and password combination';
+                echo json_encode([false, 'invalid username and password combination']);
             }
         } else {
-            echo 'mysql query error';
+            echo json_encode([false, 'mysql query error']);
         }
     }
-    
-    
 }
-
 ?>
-<html>
-    <style type="text/css">
-        
-        .aside{
-            border: 1px solid black;
-            width: 28%;
-            display: inline-block;
-            margin-top: 15%;
-        }
-        
-        .loginField
-        {
-            width: 90%;
-            padding: 10px 10px;
-            margin: 0px auto;
-            margin-bottom: 5px;
-            margin-top: 5px;
-            
-        }
-        
-        #btn_l_field
-        {
-            width: 90%;
-            padding: 10px 10px;
-            margin: 0px auto;
-            margin-bottom: 5px;
-            margin-top: 5px;
-        }
-        
-        input[type=text]
-        {
-            padding: 10px;
-            width: 330px;
-        }
-        
-        input[type=password]
-        {
-            padding: 10px;
-            width: 330px; 
-        }
-        
-        input[type=submit]
-        {
-            padding: 5px;
-            width: 100px;
-        }
-        
-        #misc
-        {
-            width: 90%;
-            margin: 0px auto;
-            margin-top: 80px;
-            border: 1px solid black;
-        }
-    </style>
-    <body>
-        <div class="aside">
-            <form action="accountLogin.php" method="POST">
-                <div class="loginField">
-                    <input type="text" name="username" placeholder="Username...">
-                </div>
-
-                <div class="loginField">
-                    <input type="password" name="password" placeholder="Password...">
-                </div>
-
-                <div id="btn_l_field">
-                    <input type="submit" value="LOGIN">
-                </div>
-                <div id="misc">
-                    <center><p>Don't have an account? <span><a href="register.html">Sign Up</a></span></p></center>
-                    <center><p><a href="recovery.php">Forgot your password?</a></p></center>
-                </div>
-            </form>
-        </div>
-    </body>
-</html>

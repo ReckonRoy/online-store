@@ -145,8 +145,12 @@ body
 }
 .product
 {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 10px 10px;
+}
+#pr_name
+{
+    margin-top: 3%;
 }
 #pr_title
 {
@@ -158,7 +162,6 @@ body
 }
 .img-hover-zoom
 {
-    border: 1px solid black;
     overflow: hidden;
 }
 

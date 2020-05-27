@@ -16,29 +16,22 @@ require 'login.php';
     $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
     if($connection -> connect_error)
     {
-        die("Could not connect");
+        die( json_encode([false, $connection -> connect_error]));
     }
     
 $inventoryObject = new Inventory();
-$inventoryObject -> getAllProducts($connection);
 
-if(isset($_POST['product_search']) && isset($_POST['type_search']))
+
+
+if(!empty($_POST['range']))
 {
-    if(!empty($_POST['product_search']))
+    $range = 'all';
+
+    if( $_POST['range'] == $range)
     {
-        $connection ->connect($db_hostname, $db_username, $db_password, $db_database);
-        $type_search = $_POST['type_search'];
-        $search_arg = $_POST['product_search'];
-        echo $type_search;
-        echo $search_arg;
-        
-        if( $type_search == "category")
-        {
-            $inventoryObject -> searchByCategory($connection, $search_arg);
-        }else if($type_search == "product_name")
-        {
-            $inventoryObject -> searchByProductName($connection, $search_arg);  
-        }
+        $inventoryObject -> getAllProducts($connection);
+    } else {
+        echo json_encode([false, 'error']);
     }
 }
 //***********************************************************************************************************************
@@ -49,7 +42,7 @@ class Inventory
     //retrieve all products In inventory database
     public function getAllProducts($conn)
     {
-        $query = "SELECT * FROM inventory";
+        $query = "SELECT product_name, product_price, pr_description, image FROM inventory";
         $result = $conn -> query($query);
         if($result)
         {
@@ -59,79 +52,25 @@ class Inventory
                 {   
                     //echo '<img src="data:image/jpeg;base64,'.base64_encode( $row['image'] ).'"/>';
                     //echo $row['product_name'];
-                    echo json_encode([true, $each_row]);
+                    $all_rows[] = $each_row;
+                    
                 }
+                
+                echo json_encode([true, $all_rows]);
+                
+                
             } else {
-                $info_message = "Stock inventory is currently empty at the moment";
+                $info_message = "Please note we are out of stock! come check on us after a while";
                 echo json_encode([false, $info_message]);
             }
-            $result -> close();
         }else{
-            echo "query run problem";
+            $info_message = "SQL query failed";
+            echo json_encode([false, $info_message]);
+            
         }   
+        $result -> close();
         $conn -> close();
     }//end method getAllProducts
-    
-    //***************************************************************************************************************************
-    
-    //method searchByCategory queries the database by passing the string parameter
-    
-    public function searchByCategory($conn, $string)
-    {
-        $query = "SELECT product_name, product_price, pr_description, image FROM inventory WHERE category = '".$string."'";
-        $result = $conn -> query($query);
-        if($result)
-        {
-            if($result -> num_rows != 0)
-            {
-                while( $row_array = $result -> fetch_assoc() )
-                {
-                    //$image = '<img src="data:image/jpeg;base64,'.base64_encode( $row_array['image'] ).'"/>';
-                    echo json_encode([true, $row_array]);
-                }
-            }else{
-                echo "product not found";
-            }
-        }else{
-            echo "error could not run query";
-        }
-        $conn -> close();
-    }//end method searchByCategory
-    
-    public function searchByProductName($conn, $string)
-    {
-        $query = "SELECT product_name, product_price, pr_description, image FROM inventory WHERE product_name = '".$string."'";
-        $result = $conn -> query($query);
-        if($result)
-        {
-            if($result -> num_rows != 0)
-            {
-                while( $row_array = $result -> fetch_assoc() )
-                {
-                    //$image = '<img src="data:image/jpeg;base64,'.base64_encode( $row_array['image'] ).'"/>';
-                    echo json_encode([true, $row_array]);
-                }
-            }else{
-                echo "product not found";
-            }
-        }else{
-            echo "error could not run query";
-        }
-        $conn -> close();
-    }//end method searchByProductName
-            
+          
 }
 ?>
-
-<html>
-    <body>
-        <form action="inventory.php" method="post">
-            <select name="type_search">
-                <option value="category">Category</option>
-                <option value="product_name">Product Name</option>
-            </select>
-            <input type="text" name="product_search">
-            <input type="submit" value="search">
-        </form>
-    </body>
-</html>

@@ -26,13 +26,13 @@ and open the template in the editor.
                     
                     <!-- search bar div-->
                     <div id="search_div">
-                        <form>
-                            <select name="type_search" id="select">
+                        <form action="search.php" method="post">
+                            <select name="type" id="select">
                                 <option value="category">CATEGORY</option>
                                 <option value="product_name">PRODUCT NAME</option>
                             </select>
-                            <input type="text" placeholder="Type here to search products..." name="search">
-                            <button id="search_btn">search</button>
+                            <input type="text" placeholder="Type here to search products..." name="search" id="search">
+                            <input type="submit" value="search" id="search_btn">
                         </form>
                     </div>
                     <!-- close search bar div-->
@@ -60,37 +60,42 @@ and open the template in the editor.
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
                 <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
-                <article class="products">
+                
+                <article class="products" v-if='product_info.length'>
                     
-                    <div class="product">
+                    <div class="product" id="product" v-for='element in product_info'>
                         <div id="pr_img" class="img-hover-zoom">
-                            <img src="img/plasma.png" alt="">
+                            <!--<img src="img/plasma.png" alt="">-->
+                            <img v-bind:src='element.image'>
+                        </div>
+                        <div id="pr_name">
+                            {{element.product_name}}
                         </div>
                         <div id="pr_title">
-                            <a href="product.php">Wide screen plasma tv,<br> dimensions 1000 * 1000</a>
+                            <a href="product.php">{{element.pr_description}}</a>
                         </div>
                         <div id="pr_price">
-                            R1,500
+                            {{element.product_price}}
                         </div>
                     </div>
-                    
-                    
-                </article>
+                    </article> 
+                   
+                <p v-else>{{error_msg}}</p>
             </section>
 <!---------------------------------------------End section ------------------------------------------------------------------->
             <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
             <div class="aside">
             <form action="accountLogin.php" method="POST">
                 <div class="loginField">
-                    <input type="text" name="username" placeholder="Username...">
+                    <input type="text" name="username" placeholder="Username..." id="username">
                 </div>
 
                 <div class="loginField">
-                    <input type="password" name="password" placeholder="Password...">
+                    <input type="password" name="password" placeholder="Password..." id="password">
                 </div>
 
                 <div id="btn_l_field">
-                    <input type="submit" value="LOGIN">
+                    <input type="button" value="LOGIN" id="login_btn" onclick="request()">
                 </div>
                 <div id="misc">
                     <center><p>Don't have an account? <span><a href="register.html">Sign Up</a></span></p></center>
@@ -103,7 +108,8 @@ and open the template in the editor.
         </div>
 
         <script type="text/javascript" src="script/vue.js"></script>
-        <script type="text/javascript" src="script/main.js"></script>
         <script type="text/javascript" src="script/login.js"></script>
+        <script type="text/javascript" src="script/products.js"></script>
+        
     </body>
 </html>
