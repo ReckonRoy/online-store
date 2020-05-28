@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -75,15 +75,24 @@ class accountLogin
                         while($each_row = $result -> fetch_assoc())
                         {
                              
-                            session_start();
+                            
                             $user_n = $each_row['name'];
                             $user_s = $each_row['surname'];
-                            $_SESSION[$user_n];
-                            $_SESSION[$user_s];
+                            
+                            
+                            $_SESSION['name'] = $user_n;
+                            $_SESSION['surname'] = $user_s;
+                            
+                            $name_session = $_SESSION['name'];
+                            $surname_session = $_SESSION['surname'];
+                            
+                            $fullName = $name_session. " " .$surname_session;
+                            echo json_encode([ true, $fullName ]);
+                            
                            
                         }
                     }else{
-                        //echo json_encode([ false, 'technical error' ]);
+                        echo json_encode([ false, 'technical error' ]);
                     }
                 } else {
                     echo json_encode([false, 'There seem to be an error with the connection']);
