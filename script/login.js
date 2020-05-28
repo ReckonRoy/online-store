@@ -27,7 +27,9 @@ function response()
             var result = JSON.parse(ajax.responseText);
             if( result[0])
             {
-                alert(result[1]);
+                
+                document.location.href = 'index.php';
+                //alert(result[1]);
             }else
             {
                 alert(result[1]);
