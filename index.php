@@ -65,22 +65,24 @@ and open the template in the editor.
             <section id="section">
                 <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
                 
-                <article class="products" v-if='product_info.length'>
+                <article class="products" id="products">
                     
-                    <div class="product" id="product" v-for='element in product_info'>
+                    <div class="product" id="product">
                         <div id="pr_img" class="img-hover-zoom">
                             <!--<img src="img/plasma.png" alt="">-->
                             <img v-bind:src='element.image'>
                         </div>
-                        <div id="pr_name">
-                            {{element.product_name}}
+                        <div id="product_name" class="pro_name">
+                            <div>{{element.product_name}}1</div> 
                         </div>
                         <div id="pr_title">
-                            <a href="product.php">{{element.pr_description}}</a>
+                            {{element.pr_description}}
                         </div>
                         <div id="pr_price">
                             {{element.product_price}}
                         </div>
+                        
+                        <div id="pro_btn"><button onclick='nav_cart()'>View Product</button></div>
                     </div>
                     </article> 
                    
@@ -132,9 +134,11 @@ and open the template in the editor.
         <div class="clrf"></div>
         </div>
 
-        <script type="text/javascript" src="script/vue.js"></script>
+        <!-- <script type="text/javascript" src="script/vue.js"></script> -->
         <script type="text/javascript" src="script/login.js"></script>
         <script type="text/javascript" src="script/products.js"></script>
         <script type="text/javascript" src="script/logout.js"></script>
+        <script type="text/javascript" src="script/cart.js"></script>
+        
     </body>
 </html>
