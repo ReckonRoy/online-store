@@ -29,7 +29,6 @@ function response()
             {
                 
                 document.location.href = 'index.php';
-                //alert(result[1]);
             }else
             {
                 alert(result[1]);

@@ -148,18 +148,12 @@ body
     border-bottom: 1px solid black;
     padding: 10px 10px;
 }
-#pr_name
+
+.pr_mid_sec
 {
     margin-top: 3%;
 }
-#pr_title
-{
-    margin-top: 3%;
-}
-#pr_price
-{
-    margin-top: 3%;
-}
+
 .img-hover-zoom
 {
     overflow: hidden;
