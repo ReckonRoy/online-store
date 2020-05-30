@@ -38,6 +38,7 @@ body
     height: 100px;
     position: fixed;
     background-color: purple;
+    z-index: 1;
 }
 
 #search_div
@@ -157,6 +158,8 @@ body
 .img-hover-zoom
 {
     overflow: hidden;
+    display: inline-block;
+    position: a
 }
 
 .img-hover-zoom img
@@ -208,8 +211,8 @@ body
         {
             padding: 10px;
             width: 330px; 
-        }
-        
+        }        
+
         input[type=submit]
         {
             padding: 5px;
@@ -226,7 +229,29 @@ body
             padding-top: 5px;
             height: 100px;
         }
+/*product.js corresponding styles*/
+.product_view_div
+{
+    padding: 10px 10px;
+    width: 600px;
+    border: 1px solid black;
+}
 
+.product_info_div
+{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px 10px;
+    line-height: 3em;
+    position: absolute;
+    margin-left: 50px;
+}
+
+.product_mi_div
+{
+    border: 1px solid black;
+    padding: 5px 5px;
+}
 .clrf
 {
     clear: both;

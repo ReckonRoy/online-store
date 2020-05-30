@@ -28,11 +28,21 @@ class ShoppingCart
         {
             die( json_encode([false. 'database connection failed']));
         }
-        $query = "SELECT id, product_price, instock, pr_description, warranty, image FROM inventory WHERE product_name = '".$name."'";
+        $query = "SELECT id, product_name, product_price, instock, pr_description, warranty, image FROM inventory WHERE product_name = '".$name."'";
         $result = $conn -> query($query);
         if($result)
         {
-            echo json_encode([true, 'success']);
+            if($result->num_rows !=0)
+            {
+                while($each_row = $result->fetch_assoc())
+                {
+                    $rows[] =  $each_row;
+                }
+                
+                echo json_encode([true, $rows]);
+            } else {
+                echo json_encode([false, 'product is longer available']);
+            }
         }else{
             echo json_encode([false, 'mysql error']);
         }
