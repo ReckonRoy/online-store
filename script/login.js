@@ -5,20 +5,20 @@
  */
 
 var ajax = new XMLHttpRequest();
-function request()
+function request_login()
 {
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
     var url = "accountLogin.php";
     var method = "POST";
     
-    ajax.onreadystatechange = response;
+    ajax.onreadystatechange = response_login;
     ajax.open(method, url, true);
     ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     ajax.send("username="+username+"&password="+password);
 }
 
-function response()
+function response_login()
 {
     if(ajax.readyState == 4)
     {
