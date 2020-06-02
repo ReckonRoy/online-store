@@ -82,6 +82,7 @@ class accountLogin
                             
                             $_SESSION['name'] = $user_n;
                             $_SESSION['surname'] = $user_s;
+                            $_SESSION['username'] = $this->getUsername();
                             
                             $name_session = $_SESSION['name'];
                             $surname_session = $_SESSION['surname'];
