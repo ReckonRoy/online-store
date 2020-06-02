@@ -176,12 +176,10 @@ function moreContent(name,  price,  instock, description, warranty, image_val, d
    
    var quantity = document.createElement("INPUT");
    quantity.setAttribute("type", "number");
-   quantity.setAttribute("value", "0");
    quantity.setAttribute("step", "1");
-   quantity.id = "quantity";
    
    var quantity_lb = document.createElement("LABEL");
-   var quantity_txt = document.createTextNode("Quantity");
+   var quantity_txt = document.createTextNode("Quantity: ");
    quantity_lb.setAttribute('for', "quantity");
    quantity_lb.append(quantity_txt);
    
@@ -190,6 +188,7 @@ function moreContent(name,  price,  instock, description, warranty, image_val, d
    
    var addToCart_btn = document.createElement('button');
    addToCart_btn.textContent = 'ADD TO CART';
+   addToCart_btn.id = 'addCart';
    bottom_b_div.appendChild(addToCart_btn);
    
    bottom_c_div.appendChild(bottom_l_div);
@@ -201,13 +200,25 @@ function moreContent(name,  price,  instock, description, warranty, image_val, d
   product_div.appendChild(image_div); 
   product_div.appendChild(right_c_div);  
   product_div.appendChild(bottom_c_div);  
+ 
+    
+  
+  var quantity_val;
+  quantity.onchange = function()
+  {
+      quantity_val = quantity.value;
+  };
   
   addToCart_btn.onclick = function()
   {
-      request_product(name);
+     
+     validateCart(name, quantity_val, price);
       
   };
+  
   div_element.appendChild(product_div);
-   document.getElementById('mi_r_div').insertBefore(quantity_lb, document.getElementById("quantity"));
+   document.getElementById('mi_r_div').insertBefore(quantity_lb, quantity);
+   
+  
 }  
 request();
