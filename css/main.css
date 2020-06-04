@@ -17,6 +17,7 @@ header, footer, nav, section, article, aside
 {
     padding: 0;
     margin: 0;
+    color: grey;
 }
 
 body
@@ -131,7 +132,7 @@ body
     border: 1px solid red;
     float: right;
     margin-top: 2%;
-    color: white;
+    color: grey;
 }
 #nav
 {

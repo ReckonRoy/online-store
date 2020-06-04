@@ -212,7 +212,7 @@ function moreContent(name,  price,  instock, description, warranty, image_val, d
   addToCart_btn.onclick = function()
   {
      
-     validateCart(name, quantity_val, price);
+     validateCart(name, quantity_val, price, image_val);
       
   };
   

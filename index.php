@@ -49,13 +49,13 @@ and open the template in the editor.
                             ?>
                             <div id="cart_icon"></div>
                             <div id="cart_quantity"></div>
-                            <div id="cart_total"></div>
+                            <div id="cart_total">
                             <?php
                             }else{
                             ?>
                             <div id="cart_icon2"></div>
                             <div id="cart_quantity2">0</div>
-                            <div id="cart_total2">0</div>
+                            <!--<div id="cart_total2">0</div>-->
                              <?php
                             }
                             ?>
@@ -67,7 +67,7 @@ and open the template in the editor.
                 <nav id="nav">
                     <center>
                         <ul id="nav_li">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="index.php">HOME</a></li>
                             <li><a href="about.html">ABOUT</a></li>
                             <li><a href="contact.html">CONTACT</a></li>
                         </ul>
@@ -116,7 +116,7 @@ and open the template in the editor.
                     <input type="button" value="LOGIN" id="login_btn" onclick="request_login()">
                 </div>
                 <div id="misc">
-                    <center><p>Don't have an account? <span><a href="register.html">Sign Up</a></span></p></center>
+                    <center><p>Don't have an account? <span><a href="register.php">Sign Up</a></span></p></center>
                     <center><p><a href="recovery.php">Forgot your password?</a></p></center>
                 </div>
                 </form>
