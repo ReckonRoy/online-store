@@ -43,21 +43,35 @@ and open the template in the editor.
                     
                     <div id="cart">
                         <div id="content">
+                             <?php 
+                            if(isset($_SESSION['name']) && isset($_SESSION['surname']))
+                            {
+                            ?>
                             <div id="cart_icon"></div>
-                            <div id="cart_quantity">5</div>
-                            <div id="cart_total">total R1,200</div>
+                            <div id="cart_quantity"></div>
+                            <div id="cart_total"></div>
+                            <?php
+                            }else{
+                            ?>
+                            <div id="cart_icon2"></div>
+                            <div id="cart_quantity2">0</div>
+                            <div id="cart_total2">0</div>
+                             <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>    
                 
                 <!-- Nav -->
                 <nav id="nav">
-                    <ul id="nav_li">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="login.html">Sign In</a></li>
-                    </ul>
+                    <center>
+                        <ul id="nav_li">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </center>
                 </nav>
             </header>
 <!----------------------------------------------End header section----------------------------------------------------------->
@@ -66,44 +80,25 @@ and open the template in the editor.
                 <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
                 
                 <article class="products" id="products">
-                    
-                    <div class="product" id="product">
-                        <div id="pr_img" class="img-hover-zoom">
-                            <!--<img src="img/plasma.png" alt="">-->
-                            <img v-bind:src='element.image'>
-                        </div>
-                        <div id="product_name" class="pro_name">
-                            <div>{{element.product_name}}1</div> 
-                        </div>
-                        <div id="pr_title">
-                            {{element.pr_description}}
-                        </div>
-                        <div id="pr_price">
-                            {{element.product_price}}
-                        </div>
-                        
-                        <div id="pro_btn"><button onclick='nav_cart()'>View Product</button></div>
-                    </div>
-                    </article> 
-                   
-                <p v-else>{{error_msg}}</p>
+
+                </article> 
             </section>
 <!---------------------------------------------End section ------------------------------------------------------------------->
             <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
             <div class="aside">
             <?php 
-                if(isset($_SESSION['name']) && isset($_SESSION['surname']))
+                if(isset($_SESSION['name']))
                 {
             ?>
+                
+                    <img src="img/profile.png" id="profile_img" alt="profile"/>
+                
                 <div>
-                    <img src="img/profile.png" alt="profile"/>
+                  
+                  <h3><?php echo $_SESSION['name']; ?></h3>
                 </div>
                 <div>
-                  <h2>Welcome!</h2>
-                  <h3><?php echo $_SESSION['name']." ".$_SESSION['surname']; ?></h3>
-                </div>
-                <div>
-                    <div><button id="logout_btn" onclick='logout()'>LOG OUT</button></div>
+                    <div id="logout_div"><button id="logout_btn" onclick='logout()'>LOG OUT</button></div>
                 </div>
                     <?php
                 }else{
@@ -118,7 +113,7 @@ and open the template in the editor.
                 </div>
 
                 <div id="btn_l_field">
-                    <input type="button" value="LOGIN" id="login_btn" onclick="request()">
+                    <input type="button" value="LOGIN" id="login_btn" onclick="request_login()">
                 </div>
                 <div id="misc">
                     <center><p>Don't have an account? <span><a href="register.html">Sign Up</a></span></p></center>
@@ -139,6 +134,8 @@ and open the template in the editor.
         <script type="text/javascript" src="script/products.js"></script>
         <script type="text/javascript" src="script/logout.js"></script>
         <script type="text/javascript" src="script/cart.js"></script>
+        <script type="text/javascript" src="script/in_cart.js"></script>
+        <script type="text/javascript" src="script/cartManager.js"></script>
         
     </body>
 </html>
