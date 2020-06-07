@@ -5,8 +5,10 @@
  */
 
 var cart_l = document.getElementById('cart_icon');
+
 cart_l.onclick = function()
 {
     document.location.href = "basket.php";
-}
+};
+
 

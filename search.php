@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -49,37 +49,79 @@ and open the template in the editor.
                     
                     <!-- search bar div-->
                     <div id="search_div">
-                        <form action="search.php" method="post">
-                            <select name="type" id="select">
-                                <option value="category">CATEGORY</option>
-                                <option value="product_name">PRODUCT NAME</option>
-                            </select>
-                            <input type="text" placeholder="Type here to search products..." name="search" id="search">
-                            <input type="submit" value="search" id="search_btn">
-                        </form>
+                        <div id="cart">
+                        <div id="content">
+                             <?php 
+                            if(isset($_SESSION['name']) && isset($_SESSION['surname']))
+                            {
+                            ?>
+                            <div id="cart_icon"></div>
+                            <div id="cart_quantity"></div>
+                            <!-- <div id="cart_total"></div> -->
+                            <?php
+                            }else{
+                            ?>
+                            <div id="cart_icon"></div>
+                            <div id="cart_quantity2">0</div>
+                            <!--<div id="cart_total2">0</div>-->
+                             <?php
+                            }
+                            ?>
+                        </div>
+                          
+                    </div>
+                        
+                        <div id="search_c_d">
+                            <form action="search.php" method="post">
+                                <select name="type" id="select">
+                                    <option value="category">CATEGORY</option>
+                                    <option value="product_name">PRODUCT NAME</option>
+                                </select>
+                                <input type="text" placeholder="Type here to search products..." name="search" id="search">
+                                <input type="submit" value="search" id="search_btn">
+                            </form>
+                        </div>
+                        <?php 
+                        if(isset($_SESSION['name']))
+                            { 
+                            ?>
+                                <div id="profile_img"><img src="img/profile.png" alt="profile"></div>   
+                        <?php
+                            }
+                        ?>
+                            </div>
+                        <div id="account_det">
+                            <div id="u_n_div"><!-- user's name goes here -->
+                                <?php 
+                                    if(isset($_SESSION['name']))
+                                    {
+                                        echo $_SESSION['name'];
+                                    }
+                                ?>
+                            </div>
+                            
+                            <div id="logout_div"><!-- log out button goes here -->
+                                <button id="logout_btn" onclick='logout()'>LOG OUT</button>
+                            </div>
+                        </div>
                     </div>
                     <!-- close search bar div-->
                     
-                    <div id="cart">
-                        <div id="content">
-                            <div id="cart_icon"></div>
-                            <div id="cart_quantity">5</div>
-                            <div id="cart_total">total R1,200</div>
-                        </div>
-                    </div>
-                </div>    
+                    
                 
                 <!-- Nav -->
                 <nav id="nav">
-                    <ul id="nav_li">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="login.html">Sign In</a></li>
-                    </ul>
+                    <center>
+                        <ul id="nav_li">
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </center>
+                    
                 </nav>
             </header>
-<!----------------------------------------------End header section----------------------------------------------------------->
+<!----------------------------------------------End header section----------------------------------------------------------->>
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
                 <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
@@ -223,5 +265,9 @@ and open the template in the editor.
         <div class="clrf"></div>
         </div>
         
+        <script type="text/javascript" src="script/logout.js"></script>
+        <script type="text/javascript" src="script/cart.js"></script>
+        <script type="text/javascript" src="script/in_cart.js"></script>
+        <script type="text/javascript" src="script/cartManager.js"></script>
     </body>
 </html>

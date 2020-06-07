@@ -18,6 +18,7 @@ header, footer, nav, section, article, aside
     padding: 0;
     margin: 0;
     color: grey;
+    font-family: 'Karla', sans-serif;
 }
 
 body
@@ -42,9 +43,64 @@ body
 
 #search_div
 {
-    width: 50%;
-    float: right;
+    width: 80%;
+    position: relative;
+    height: 60px;
+    margin-left: 19%;
     text-align: right;
+}
+#search_c_d
+{
+    margin-top: 5px;
+    position: absolute;
+    width: 70%;
+    right: 60px;
+}
+
+#account_det
+{
+    display: none;
+    width: 100px;
+    background-color: grey;
+    height: 100px;
+    position: absolute;
+    right: 0px;
+    top: 51px;
+    text-align: left;
+}
+#u_n_div
+{
+    color: white;
+}
+#logout_btn
+{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: orangered;
+    border: white;
+    color: white;
+}
+
+#logout_btn:hover
+{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #361004;
+    border: 1px solid orange;
+    cursor: pointer;
+    color: white;
+}
+#profile_img
+{
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+}
+
+#profile_img img
+{
+    border-radius: 50px;
 }
 
 #search_div input[type=text]
@@ -61,13 +117,15 @@ body
 {
     padding: 8px 8px;
     width: 100px;
+    margin-right: 10%;
 }
 
 #cart
 {
-    width: 18%;
+    width: 7%;
     margin-left: 20px;
     margin-top: 5px;
+    position: absolute;
 }
 
 #content
@@ -78,18 +136,16 @@ body
 }
 #cart_icon2
 {
-   display: inline-block;
+    display: inline-block;
     background-image: url("../img/cart_icon.jpg");
     width: 25px;
     height: 25px;
     float: left;
-    border: 1px solid blue;
 }            
 #cart_quantity2
 {
     display: inline-block;
     width: 20px;
-    border: 1px solid purple;
     background-color: orange;
     color: white;
     border-radius: 1.5em;
@@ -100,14 +156,13 @@ body
 #cart_total2
 {
     display: inline-block;
-    border: 1px solid red;
     float: right;
     margin-top: 2%;
     color: white;
 }
 #cart_icon
 {
-   display: inline-block;
+    display: inline-block;
     background-image: url("../img/cart_icon.jpg");
     width: 25px;
     height: 25px;
@@ -118,7 +173,6 @@ body
 {
     display: inline-block;
     width: 20px;
-    border: 1px solid purple;
     background-color: orange;
     color: white;
     border-radius: 1.5em;
@@ -129,7 +183,6 @@ body
 #cart_total
 {
     display: inline-block;
-    border: 1px solid red;
     float: right;
     margin-top: 2%;
     color: grey;
@@ -164,29 +217,8 @@ body
     
 }
 
-#profile_img
-{
-    border-radius: 50px;
-    cursor: pointer;
-}
-#logout_btn
-{
-    font-weight: bold;
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    color: #262323;
-    background-color: white;
-}
 
-#logout_btn:hover
-{
-    margin-top: 20px;
-    border: none;
-    cursor: pointer;
-    color: #f7f2f3;
-    background-color: #660613;
-}
+
 /*--------------------------------End Header Section---------------------------------------------------------------------------*/
 
 /*--------------------------------Section Section------------------------------------------------------------------------------*/
@@ -217,7 +249,41 @@ body
 {
     overflow: hidden;
     display: inline-block;
-    position: a
+}
+
+#registerBtn
+{
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    cursor: pointer;
+   
+}
+
+#registerBtn:hover
+{
+    color: #02f52f;
+    border-bottom-style: solid;
+    border-bottom-color: grey;
+    border-bottom-width: 0.5px;
+}
+
+/*view product button*/
+#viewProduct_btn
+{
+    background-color: #fff;
+    border-color: #1c8644;
+    color: #1c8644;
+    padding: 10px 10px;
+    width: 100%; 
+    
+}
+
+#viewProduct_btn:hover
+{
+    background: #1c8644;
+    color: #fff;
+    cursor: pointer;
 }
 
 .img-hover-zoom img
@@ -247,6 +313,11 @@ body
             margin-bottom: 5px;
             margin-top: 5px;
             
+        }
+        
+        .loginField a
+        {
+            text-decoration: none;
         }
         
         #btn_l_field
@@ -281,16 +352,47 @@ body
             width: 90%;
             margin: 0px auto;
             margin-top: 50px;
-            border: 1px solid black;
             line-height: 2.5em;
             padding-top: 5px;
             height: 100px;
+        }
+        #misc a
+        {
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+        
+        #misc a:hover
+        {
+            text-decoration: none;
+            color: #1c8644;
+        }
+        /*  Login Button Style*/
+        #login_btn
+        {
+            width: 100%;
+            padding: 10px 10px;
+            background-color: orangered;
+            border: white;
+            color: white;
+        }
+        
+        #login_btn:hover
+        {
+            width: 100%;
+            padding: 10px 10px;
+            background-color: #361004;
+            border: 1px solid orange;
+            cursor: pointer;
+            color: white;
         }
 /*product.js corresponding styles*/
 .product_view_div
 {
     padding: 10px 10px;
     width: 600px;
+    margin-bottom: 30px;
+    font-size: 18px;
 }
 
 .product_info_div
@@ -305,8 +407,68 @@ body
 .product_mi_div
 {
     padding: 5px 5px;
+    margin: 30px 0px;
+    line-height: 2em;
 }
+
+/*bottom_b_div this div is created in the products js file it contains the addToCart button*/
+#bottom_b_div
+{
+    text-align: right;
+}
+
+#addCart
+{
+    padding: 5px 5px;
+    width: 150px;
+    background-color: #02f52f;
+    color: white;
+    border: none;
+}
+
+#addCart:hover
+{
+    color: #464a46;
+    background-color: #dfe6e0;
+    border: 1px solid #025c12;
+}
+
 .clrf
 {
     clear: both;
+}
+/*********************************** Style section for footer*************************************/
+footer
+{
+    background-color: #262625;
+    width: 100%;
+}
+
+#f-b-div
+{
+    width: 97%;
+    margin: 0 auto;
+    padding: 5px 5px;
+}
+#r_c_div
+{
+    width: 48.5%;
+    display: inline-block;
+    float: left;
+    
+}
+
+#r_c_div li
+{
+    list-style: none;
+}
+
+#r_c_div a
+{
+    text-decoration: none;
+}
+
+#r_c_div a:hover
+{
+    color: white;
 }

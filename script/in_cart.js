@@ -24,8 +24,8 @@ function response_inCart()
             var result = JSON.parse(ajax_inCart.responseText);
             if( result[0])
             {
-                var total = document.getElementById("cart_total");
-                total.textContent = "R"+result[1];
+                //var total = document.getElementById("cart_total");
+                //total.textContent = "R"+result[1];
                 var quantity = document.getElementById("cart_quantity");
                 quantity.textContent = result[2];
                 

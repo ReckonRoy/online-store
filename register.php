@@ -35,8 +35,6 @@ if(isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['username']
     } else {
         echo  "Please fill in all fields";
     }
-} else {
-    echo "not set";
 }
 
 class database_data_processes
@@ -81,11 +79,11 @@ class database_data_processes
                     {
                         echo "success";
                     } else {
-                        echo 'failed';
+                        echo 'Registration failed please try again';
                     }
 
                 } else {
-                    echo 'User does not exist';
+                    echo 'Sorry this user already exists';
                 }
             }  else {
                 //get Id query failed
@@ -130,131 +128,10 @@ class database_data_processes
 <html>
     <header>
         <style type="text/css">
-            .form
-            {
-                width: 800px;
-            }
             
-            .field
-            {
-                display: inline-block;
-                width: 370px;
-                margin-bottom: 5px;
-                padding: 10px;
-            }
-            #email_field
-            {
-                display: inline-block;
-                width: 765px;
-                margin-bottom: 5px;
-                padding: 10px;
-            }
-            
-            #gender_div
-            {
-                display: inline-block;
-                width: 765px;
-                margin-bottom: 5px;
-                padding: 10px;
-            }
-            
-            #btn_div
-            {
-                display: inline-block;
-                width: 765px;
-                margin-bottom: 5px;
-                padding: 10px;
-            }
-            
-            input[type=text]
-            {
-                padding: 5px;
-                width: 350px;
-            }
-            input[type=password]
-            {
-                padding: 5px;
-                width: 350px;
-            }
-            input[type=email]
-            {
-                padding: 5px;
-                width: 745px;
-            }
-            
-            input[type=submit]
-            {
-                padding: 5px;
-                height: 30px;
-            }
-            
-            input[type=text]:focus {
-            color: #495057;
-            background-color: #fff;
-            border-color: #80bdff;
-            outline: 0;
-            box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-            input[type=password]:focus {
-            color: #495057;
-            background-color: #fff;
-            border-color: #80bdff;
-            outline: 0;
-            box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-            input[type=email]:focus {
-            color: #495057;
-            background-color: #fff;
-            border-color: #80bdff;
-            outline: 0;
-            box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-}
         </style>
     </header>
     <body>
-        <form method="POST" action="database_data_processes.php">
-            <fieldset class="form">
-            <legend>Personalia</legend>
-            <div id="form">
-                    <div class="field">
-                    <label>Name</label>
-                        <br>
-                        <input type="text" name="name">
-                    </div>
-
-                    <div class="field">
-                        <label>Surname</label>
-                        <br>
-                        <input type="text" name="surname">
-                    </div>
-                </div>
-            
-                <div>
-                    <div class="field">
-                        <label>Username</label>
-                        <br>
-                        <input type="text" name="username">
-                    </div>
-
-                    <div class="field">
-                        <label>password</label>
-                        <br>
-                        <input type="password" name="password">
-                    </div>
-                </div>
-            <div id="email_field">
-                <label>Email</label>
-                <br>
-                <input type="email" name="email">
-             </div>
-            
-            <div id="gender_div">
-                <label>Gender</label>
-                <br>
-                <input type="radio" name="gender" value="female">female
-                <input type="radio" name="gender" value="male">male
-            </div>
-            
-            <div id="btn_div"><input type="submit" value="REGISTER NOW"></div>
-            </fieldset>
-        </form>
+        
     </body>
 </html>

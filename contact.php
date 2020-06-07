@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,6 +13,7 @@
  */
 require 'sanitizeInput.php';
 require_once 'login.php';
+
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 $sanitizeObject = new SanitizeInput();
 
@@ -26,13 +27,17 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['address']) &
         $message = $sanitizeObject ->mysqlStringLiteral($connection, $_POST['message']);
         
         $contactObject = new Contact($name, $email, $address, $message);
-        echo $contactObject ->getEmail();
+        $contactObject -> setId($connection);
         
+        
+    } else {
+        echo "empty fields detected";
     }
 }
 
 class Contact
 {
+    private $id; 
     private $name;
     private $email;
     private $address;
@@ -51,6 +56,11 @@ class Contact
     /*
      * public getter methods to retrieve values from private properties
      */
+    public function getId()
+    {
+        return $this -> id;
+    }
+    
     public function getName()
     {
         return $this -> name;
@@ -77,17 +87,34 @@ class Contact
      * once data has been inserted a suucess message is returned otherwise we error message is returned
      */
     
-    public function getId($conn)
+    public function setId($conn)
     {
-        $query = "SELECT id FROM client_details WHERE username = '".$username."'";
+        $query = "SELECT id FROM client_details WHERE username='".$_SESSION['username']."'";
         $result = $conn -> query($query);
         if($result)
         {
             if($result -> num_rows != 0)
             {
                 $row_id = $result -> fetch_assoc(); 
-                return $row_id['id'];
-
+                $this -> id = $row_id['id'];
+                
+                $query = "INSERT INTO contact (id, name, email, address, message) VALUES('".$this->getId()."', '".$this->getName()."', '".$this->getEmail()."', '".$this->getAddress()."', '".$this->getMessage()."')";
+                $result = $conn -> query($query);
+                if($result)
+                {
+                    echo "Thank you for your feedback";
+                    echo "<br>";
+                    echo "You will be redirected to the home page within 2seconds";
+                }else{
+                    echo "technical error! please contact web admin@ sourcecodej52@gmail.com";
+                    echo "<br>";
+                    echo "You will be redirected to the home page within 2 seconds";
+                }
+                
+            } else {
+                echo "Please login. ";
+                echo "<br>";
+                echo "You will be redirected to the home page within 2 seconds";
             }    
         } else {
             echo "Sorry we are experiencing some technical issues";
@@ -98,21 +125,9 @@ class Contact
 }
 
 ?>
-
-<html>
-<body>
-    
-    <form action="contact.php" method="post">
-        <input type="text" name="name" placeholder="Name...">
-        <br>
-        <input type="text" name="email" placeholder="Email...">
-        <br>
-        <input type="text" name="address" placeholder="Address...">
-        <br>
-        <textarea cols="20" rows="10" name="message" placeholder="Message..."></textarea>
-        <br>
-        <input type="submit" value="send">
-    </form>
-    
-</body>
-</html>
+<script type="text/javascript">
+    setInterval(function()
+    {
+        document.location.href = "index.php";
+    }, 2000);
+ </script>

@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07 Jun 2020, 4:45:53 PM
+    Author     : le-roy
+*/
+
+#form
+{
+    width: 50%;
+    position: absolute;
+    border: 1px solid black;
+    z-index: 3;
+    top: 25%;
+    left: 25%;
+    background-color: white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0
+		rgba(0, 0, 0, 0.17);
+    display: none;
+}
+
+.field
+{
+    display: inline-block;
+    width: 40%;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+#email_field
+{
+    display: inline-block;
+    width: 83%;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+#gender_div
+{
+    display: inline-block;
+    width: 765px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+#btn_div
+{
+    display: inline-block;
+    width: 765px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+#form input[type=text]
+{
+    padding: 5px;
+    width: 100%;
+}
+#form input[type=password]
+{
+    padding: 5px;
+    width: 100%;
+}
+#form input[type=email]
+{
+    padding: 5px;
+    width: 100%;
+}
+
+#form input[type=submit]
+{
+    padding: 5px;
+    height: 30px;
+}
+
+#form input[type=text]:focus {
+color: #495057;
+background-color: #fff;
+border-color: #80bdff;
+outline: 0;
+box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+#form input[type=password]:focus {
+color: #495057;
+background-color: #fff;
+border-color: #80bdff;
+outline: 0;
+box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+#form input[type=email]:focus {
+color: #495057;
+background-color: #fff;
+border-color: #80bdff;
+outline: 0;
+box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.closeBtn
+{
+    color: red;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, closeBtn:focus
+{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

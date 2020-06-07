@@ -1,147 +1,76 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 19 May 2020, 1:05:32 PM
-    Author     : le-roy
-*/
-
-header, footer, nav, section, article, aside
+#comment_msg_div
 {
-    display: block;
+    margin-left: 2%;
+    margin-bottom: 10%;
+    font-size: 25px;
+    color: grey;
 }
 
-*
-{
-    padding: 0;
-    margin: 0;
-}
-
-body
-{
-    padding: 0;
-    margin: 0;
-}
-
-#container
-{
-    border: 1px solid black;
-    width: 95%;
-}
-/*HEADER SECTION---------------------------------------------------------------------------------------------------------------------*/
-#header
-{
-    border: 1px solid black;
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    background-color: purple;
-}
-
-#search_div
-{
-    width: 50%;
-    border: 1px solid green;
-    float: right;
-    text-align: right;
-}
-
-#nav
-{
-    clear: both;
-    border: 1px solid red;
-    width: 100%;
-    margin-top: 70px; 
-    text-align: right;
-    background-color: yellow;
-}
-
-#nav_li li
-{
-    display: inline-block;
-    list-style: none;  
-    padding: 5px;
-}
-/*--------------------------------End Header Section---------------------------------------------------------------------------*/
-
-/*--------------------------------Section Section------------------------------------------------------------------------------*/
-#section
-{
-    width: 70%;
-    border: 1px solid black;
-    margin: 0 auto;
-    margin-top: 9%;
-}
-/*Contact form*/
 .contact_form
 {
-    width: 100%;
-    border: 1px solid black;
+    width: 48.5%;
+    background-color: #c99e59;
+    padding-top: 20px;
+    display: inline-block;
 }
 
-#name_div
+#name_c_div
 {
     width: 45%;
-    border: 1px solid black;
     display: inline-block;
-    margin-left: 2.5%;
+    margin-left: 2%;
     margin-bottom: 3%;
 }
 
-#email_div
+#email_c_div
 {
     width: 45%;
-    border: 1px solid black;
     display: inline-block;
     margin-left: 5%;
 }
 
-#address_div
+#address_c_div
 {
     width: 95%;
-    border: 1px solid black;
-    margin-left: 2.5%;
+    margin-left: 2%;
     margin-bottom: 3%;
 }
 
-#message_div
+#message_c_div
 {
     width: 95%;
-    border: 1px solid black;
-    margin-left: 2.5%;
+    margin-left: 2%;
     margin-bottom: 3%;
 }
 
 .contact_form input[type=text]
 {
-    width: 95%;
+    width: 90%;
     padding: 10px;
     height: 20px;
 }
 
 .contact_form input[type=email]
 {
-    width: 94%;
+    width: 90%;
     padding: 10px;
     height: 20px;
 }
 
-#address_field
+#address_c_field
 {
-    width: 97.5%;
+    width: 95%;
     padding: 10px;
     height: 20px;
 }
 
-#button_div
+#button_c_div
 {
-    border: 1px solid black;
     text-align: right;
+    margin-right: 20px;
 }
 
-input[type=button]
+.contact_form input[type=button]
 {
     padding: 10px;
     color: blue;

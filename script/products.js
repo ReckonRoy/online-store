@@ -83,6 +83,7 @@ function content(name, description, price, image_val, div_element)
    var product_div = document.createElement('div');
    product_div.className = 'product';
    
+   
    var image_div = document.createElement('div');
    image_div.className = 'img-hover-zoom';
    var image = document.createElement('img');
@@ -104,6 +105,7 @@ function content(name, description, price, image_val, div_element)
    var btn_div = document.createElement('div');
    var viewProduct_btn = document.createElement('button');
    viewProduct_btn.textContent = 'View Product';
+   viewProduct_btn.id = 'viewProduct_btn';
    btn_div.appendChild(viewProduct_btn);
    
   product_div.appendChild(image_div); 
@@ -116,6 +118,7 @@ function content(name, description, price, image_val, div_element)
       
   };
   div_element.appendChild(product_div);
+  
    
 }  
 
@@ -190,6 +193,7 @@ function moreContent(name,  price,  instock, description, warranty, image_val, d
    addToCart_btn.textContent = 'ADD TO CART';
    addToCart_btn.id = 'addCart';
    bottom_b_div.appendChild(addToCart_btn);
+   bottom_b_div.id = "bottom_b_div";
    
    bottom_c_div.appendChild(bottom_l_div);
    bottom_c_div.appendChild(bottom_r_div);
