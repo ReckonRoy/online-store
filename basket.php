@@ -16,39 +16,8 @@
         <div id="container">
             
             <!-- header section-->
-            <header id="header">
-                
-                <!-- div contains hero image and search bar-->
-                <div>
-                    <div>
-                        
-                    </div>
-                    
-                    <!-- search bar div-->
-                    <div id="search_div">
-                        <div id="cart">
-                        <div id="content">
-                          
-                        </div>
-                          
-                    </div>
-                        
-                        <div id="search_c_d">
-                            <form action="search.php" method="post">
-                                <select name="type" id="select">
-                                    <option value="category">CATEGORY</option>
-                                    <option value="product_name">PRODUCT NAME</option>
-                                </select>
-                                <input type="text" placeholder="Type here to search products..." name="search" id="search">
-                                <input type="submit" value="search" id="search_btn">
-                            </form>
-                        </div>    
-                      
-                    </div>
-                    <!-- close search bar div-->
-                    
-                    
-                
+            <header id="header"> 
+
                 <!-- Nav -->
                 <nav id="nav">
                     <center>
@@ -63,7 +32,7 @@
             </header>
 <!----------------------------------------------End header section----------------------------------------------------------->
             <section id="main">
-                <div id="header_div">Shopping Cart</div>
+                <div id="header_div"><center>Shopping Cart</center></div>
                 <article id="products">
                     
                 </article>

@@ -13,7 +13,7 @@ and open the template in the editor.
 /* main section style*/
 #main
 {
-    margin-top: 230px;
+    margin-top: 150px;
     position: absolute;
     width: 100%;
     background-color: #ccc8c8;
@@ -21,7 +21,7 @@ and open the template in the editor.
 
 #header_div
 {
-    margin: 10px auto;
+    margin: 5px auto;
     margin-bottom: 10px;
     width: 70%;
     padding: 5px 10px;
