@@ -110,4 +110,7 @@ function error_content(container, msg)
     container.appendChild(content);
 }
 
-setInterval( function() {request()}, 1000);
+ setInterval(function(){
+     request();
+ },
+ 1000);

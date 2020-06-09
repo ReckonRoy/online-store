@@ -92,6 +92,7 @@ class accountLogin
                             
                            
                         }
+                        $result -> close();
                     }else{
                         echo json_encode([ false, 'technical error' ]);
                     }
@@ -104,6 +105,7 @@ class accountLogin
         } else {
             echo json_encode([false, 'mysql query error']);
         }
+        $conn -> close();
     }
 }
 ?>

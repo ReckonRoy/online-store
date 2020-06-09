@@ -42,4 +42,4 @@ function response_inCart()
     }
 }
 
- setInterval(function(){request_inCart()}, 1000);
+ setInterval(function(){request_inCart();}, 1000);

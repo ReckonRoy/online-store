@@ -36,11 +36,13 @@ class CartProcess
                     $rows[] = $each_row;
                 }
                 echo json_encode([true, $rows]);
+                $result->close();
             } else {
                 echo json_encode([false, "cart is currently empty"]);
             }
         } else {
             echo json_encode([false, "run query failed"]);
         }
+        $conn -> close();
     }
 }

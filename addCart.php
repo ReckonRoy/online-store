@@ -39,9 +39,11 @@ class AddCart
         $result = $conn -> query($query);
         if($result)
         {            echo json_encode([true, "Item added to cart"]);
-
+ 
+            $result->close();
         }else{
             echo json_encode([false, "Technical error please try again later"]);
         }
+        $conn -> close();
     }
 }
