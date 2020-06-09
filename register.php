@@ -124,14 +124,8 @@ class database_data_processes
 }
 
 ?>
-
-<html>
-    <header>
-        <style type="text/css">
-            
-        </style>
-    </header>
-    <body>
-        
-    </body>
-</html>
+<script type="text/javascript">
+    setInterval(function(){
+        document.location.href = "index.php";
+    }, 2000);
+</script>

@@ -107,3 +107,9 @@ class accountLogin
     }
 }
 ?>
+
+<script type="text/javascript">
+    setInterval(function(){
+        document.location.href = "index.php";
+    }, 2000);
+</script>
