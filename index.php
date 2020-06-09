@@ -12,11 +12,11 @@ and open the template in the editor.
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" type="text/css" href="css/register.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="css/contact.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
         <title>Home</title>
     </head>
     <body>
@@ -24,13 +24,6 @@ and open the template in the editor.
         <div id="container">
             <!-- header section-->
             <header id="header">
-                
-                <!-- div contains hero image and search bar-->
-                <div>
-                    <div>
-                        
-                    </div>
-                    
                     <!-- search bar div-->
                     <div id="search_div">
                         <div id="cart">
