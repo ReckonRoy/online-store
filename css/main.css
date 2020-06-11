@@ -243,12 +243,15 @@ body
 .pr_mid_sec
 {
     margin-top: 3%;
+    height: 100px;
+    overflow-y: auto;
 }
 
 .img-hover-zoom
 {
     overflow: hidden;
     display: inline-block;
+    height: 200px;
 }
 
 #registerBtn
