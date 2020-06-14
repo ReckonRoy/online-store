@@ -189,7 +189,7 @@ and open the template in the editor.
         </div>
         <!---------------------------------Close register modal--------------------------------->
         <footer>
-            <div><center>Copy right 2020</center></div>
+            
             <div id="f-b-div"><!-- footer content bottom div-->
                 <div id="r_c_div"><!-- footer bottom right content div -->
                 <h3>Check out my other projects on <em> <a href="#">github:</a></em></h3>
@@ -208,7 +208,7 @@ and open the template in the editor.
                         <div id="name_c_div"><input type="text" placeholder="Name..." name="name"></div><div id="email_c_div"><input type="email" placeholder="Email..." name="email"></div>
                         <div id="address_c_div"><input type="text" placeholder="Address..." id="address_c_field" name="address"></div>
                         <div id="message_c_div">
-                            <textarea cols="60" rows="15" name="message">
+                            <textarea cols="69" rows="7" name="message">
                                 
                             </textarea>
                         </div>
@@ -217,6 +217,8 @@ and open the template in the editor.
                     </form>
             </div>
             </div>
+			
+            <div><center>Copy right 2020</center></div>
         </footer>
             
             
