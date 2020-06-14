@@ -23,6 +23,7 @@ and open the template in the editor.
 <!----------------------------------------------Container Div--------------------------------------------------------------->
         <div id="container">
             <!-- header section-->
+			 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
             <header id="header">
                     <!-- search bar div-->
                     <div id="search_div">
