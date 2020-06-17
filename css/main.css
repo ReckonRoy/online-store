@@ -49,46 +49,107 @@ body
 {
     width: 100%;
 }
-/*HEADER SECTION---------------------------------------------------------------------------------------------------------------------*/
-#header
+
+/*----------------------------------HEADER SECTION-----------------------------------------------------------------------------*/
+#t_s_h
 {
-    width: 100%;
-    height: 150px;
-    position: fixed;
-    background-color: white;
-    z-index: 1;
+	width: 100%;
+	padding: 0px 0px;
 }
 
-#search_div
+#w_h_t
 {
-    width: 80%;
-    position: relative;
-    height: 60px;
-    margin-left: 19%;
-    text-align: right;
+	display: inline-block;
+	width: 35%;
+	height: 100px;
+	float: left;
+	margin-left: 5px;
+	line-height: 3em;
 }
-#search_c_d
+
+#w_h_t p
 {
-    margin-top: 5px;
-    position: absolute;
-    width: 70%;
-    right: 60px;
+	margin-top: 20px;
+	font-size: 20px;
+}
+
+#t_c_header
+{
+	font-size: 25px;
+}
+
+#c_q{
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: orange;
+	position: absolute;
+	right: 0px;
+	
+	text-align: center;
+}
+
+#c_i_q
+{
+	margin-top: 5px;
+	color: white;
+}
+
+#i_t_h
+{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	padding: 5px 0px;
+	height: 30px;
+}
+
+#cart_icon{
+	width: 90px;
+	height: 30px;
+	position: absolute;
+	padding: 0;
+	right: 50px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+#right-div
+{
+	display: inline-block;
+	width: 50%;
+	float: right;
+	margin-right: 5px;
+}
+#login
+{
+	width: 100px;
+	position: absolute;
+	height: 30px;
+	right: 150px;
+	margin-right: 10px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 #account_det
 {
-    display: none;
-    width: 100px;
-    background-color: grey;
+	display: none;
+	position: absolute;
+	border: 1px solid ghostwhite;
+	box-shadow: 1px 1px #d4d0cf;
+	border-radius: 10px;
+	width: 100px;
+	right: 180px;
+	top: 40px;
+	background-color: white;
     height: 100px;
-    position: absolute;
-    right: 0px;
-    top: 51px;
-    text-align: left;
-}
-#u_n_div
-{
-    color: white;
+	z-index: 5;
 }
 #logout_btn
 {
@@ -96,155 +157,93 @@ body
     padding: 10px 10px;
     background-color: orangered;
     border: white;
+	margin-top: 2px;
     color: white;
+	opacity: 0.6;
 }
 
 #logout_btn:hover
 {
     width: 100%;
     padding: 10px 10px;
-    background-color: #361004;
     border: 1px solid orange;
     cursor: pointer;
     color: white;
+	opacity: 1;
 }
-#profile_img
+#account_profile
 {
-    display: inline-block;
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-}
-
-#profile_img img
-{
-    border-radius: 50px;
+	width: 30px;
+	height: 30px;
 }
 
-#search_div input[type=text]
+#i_b_h
 {
-    padding: 10px 10px;
-    width: 400px;
+	display: inline-block;
+	width: 100%;
+	padding: 5px 0px;
+	text-align: right;
+	position: relative;
 }
-#select
+
+#clr-f{
+	clear: both;
+}
+
+#select_t
 {
-    padding: 10px 10px;
+	padding: 10px 10px;
 }
 
 #search_btn
 {
-    padding: 8px 8px;
-    width: 100px;
-    margin-right: 10%;
+	padding: 8px 8px;
+	width: 60px;
 }
 
-#cart
+#i_b_h input[type=text]
 {
-    width: 7%;
-    margin-left: 20px;
-    margin-top: 5px;
-    position: absolute;
+	padding: 10px 10px;
+	width: 50%;
+	margin-top: 3px;
 }
-
-#content
-{
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-#cart_icon2
-{
-    display: inline-block;
-    background-image: url("../img/cart_icon.jpg");
-    width: 25px;
-    height: 25px;
-    float: left;
-}            
-#cart_quantity2
-{
-    display: inline-block;
-    width: 20px;
-    background-color: orange;
-    color: white;
-    border-radius: 1.5em;
-    padding: 5px 10px;
-    margin-left: 10px;
-}
-            
-#cart_total2
-{
-    display: inline-block;
-    float: right;
-    margin-top: 2%;
-    color: white;
-}
-#cart_icon
-{
-    display: inline-block;
-    background-image: url("../img/cart_icon.jpg");
-    width: 25px;
-    height: 25px;
-    float: left;
-    cursor: pointer;
-}            
-#cart_quantity
-{
-    display: inline-block;
-    width: 20px;
-    background-color: orange;
-    color: white;
-    border-radius: 1.5em;
-    padding: 5px 10px;
-    margin-left: 10px;
-}
-            
-#cart_total
-{
-    display: inline-block;
-    float: right;
-    margin-top: 2%;
-    color: grey;
-}
+			
 #nav
 {
-    clear: both;
-    width: 100%;
-    margin-top: 57px;
-    padding: 20px;
-    text-align: right;
-    background-color: #99968d;
+	clear: both;
+	width: 100%;
+	margin-top: 10px;
+	padding: 20px;
+	text-align: right;
+	background-color: #99968d;
 }
 
 #nav_li a{
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 #nav_li a:hover{
-    color: white;
-    font-weight: bold;
-    color: #0a5df7;
-    text-decoration: none;
+	color: white;
+	font-weight: bold;
+	color: #0a5df7;
+	text-decoration: none;
 }
 
 #nav_li li
 {
-    display: inline-block;
-    list-style: none;  
-    padding: 5px;
-    
+	display: inline-block;
+	list-style: none;  
+	padding: 5px;
+	
 }
-
-
-
-/*--------------------------------End Header Section---------------------------------------------------------------------------*/
 
 /*--------------------------------Section Section------------------------------------------------------------------------------*/
 #section
 {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 5%;
     float: right;
 }
 .products{

@@ -22,82 +22,47 @@ and open the template in the editor.
     <body>
 <!----------------------------------------------Container Div--------------------------------------------------------------->
         <div id="container">
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
             <!-- header section-->
-			 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
-            <header id="header">
-                    <!-- search bar div-->
-                    <div id="search_div">
-                        <div id="cart">
-                        <div id="content">
-                             <?php 
-                            if(isset($_SESSION['name']) && isset($_SESSION['surname']))
-                            {
-                            ?>
-                            <div id="cart_icon"></div>
-                            <div id="cart_quantity"></div>
-                            <!-- <div id="cart_total"></div> -->
-                            <?php
-                            }else{
-                            ?>
-                            <div id="cart_icon"></div>
-                            <div id="cart_quantity2">0</div>
-                            <!--<div id="cart_total2">0</div>-->
-                             <?php
-                            }
-                            ?>
-                        </div>
-                          
-                    </div>
-                        
-                        <div id="search_c_d">
-                            <form action="search.php" method="post">
-                                <select name="type" id="select">
-                                    <option value="category">CATEGORY</option>
-                                    <option value="product_name">PRODUCT NAME</option>
-                                </select>
-                                <input type="text" placeholder="Type here to search products..." name="search" id="search">
-                                <input type="submit" value="search" id="search_btn">
-                            </form>
-                        </div>    
-                         <?php 
-                        if(isset($_SESSION['name']))
-                            { 
-                            ?>
-                        <div id="profile_img" class="modal_pic_div"><img src="img/profile.png" id="profile_pic" alt="profile"></div>   
-                        <?php
-                            }
-                        ?>
-                        <div id="account_det">
-                            <div id="u_n_div"><!-- user's name goes here -->
-                                <?php 
-                                    if(isset($_SESSION['name']))
-                                    {
-                                        echo $_SESSION['name'];
-                                    }
-                                ?>
-                            </div>
-                            
+            <div id="t_s_h">
+			<div id="w_h_t">
+				<p><span id="t_c_header">Online Store</span> We have everything you want!</p>
+			</div>
+			<div id="right-div">
+				<div id="i_t_h"><!-- Inner Top Header -->
+					<div id="login" id="login_div" onclick="login()"><img src="img/profile.png" id="account_profile"><span id="acc_log_txt">Login</span></div>
+					<div id="cart_icon"><img src="img/cart_icon.jpg" id="c_icon">Cart</div>
+					<div id="c_q"><div id="c_i_q">0</div></div>
+					
+					 <div id="account_det">
                             <div id="logout_div"><!-- log out button goes here -->
                                 <button id="logout_btn" onclick='logout()'>LOG OUT</button>
                             </div>
-                        </div>
-                    </div>
-                    <!-- close search bar div-->
-                    
-                    
-                
-                <!-- Nav -->
-                <nav id="nav">
-                    <center>
-                        <ul id="nav_li">
-                            <li><a href="index.php">HOME</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
-                        </ul>
-                    </center>
-                    
-                </nav>
-            </header>
+                      </div>
+						
+				</div>
+				<div id="i_b_h"><!-- Inner Bottom Header-->
+					 <select name="type" id="select_t">
+						<option value="category">CATEGORY</option>
+						<option value="product_name">PRODUCT NAME</option>
+						
+					</select>
+					<input type="text" placeholder="Type here to search products..." name="search" id="search_t">
+					<input type="submit" value="search" id="search_btn">
+				</div>
+			</div>
+			<div id="clr-f"></div>
+			<!-- Nav -->
+			<nav id="nav">
+				<center>
+					<ul id="nav_li">
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+				</center>
+			</nav>
+		</div>
 <!----------------------------------------------End header section----------------------------------------------------------->
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
@@ -108,34 +73,7 @@ and open the template in the editor.
                 </article> 
             </section>
 <!---------------------------------------------End section ------------------------------------------------------------------->
-            <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
-            <div class="aside">
-                <?php
-                if(!isset($_SESSION['name'])){
-                ?>
-                <form action="accountLogin.php" method="POST">
-                <div class="loginField">
-                    <input type="text" name="username" placeholder="Username..." id="username">
-                </div>
-
-                <div class="loginField">
-                    <input type="password" name="password" placeholder="Password..." id="password">
-                </div>
-
-                <div id="btn_l_field">
-                    <button id="login_btn" onclick="request_login()">LOGIN</button>
-                    
-                </div>
-                <div id="misc">
-                    <center><p>Don't have an account? <input type="button" id='registerBtn' value="Sign Up" onclick='openRegisterModal()'></p></center>
-                    <center><p><a href="recovery.php">Forgot your password?</a></p></center>
-                </div>
-                </form>
-            <?php
-                }
-            ?>
             
-        </div>
             
         <div class="clrf"></div>
         
@@ -232,6 +170,6 @@ and open the template in the editor.
         <script type="text/javascript" src="script/in_cart.js"></script>
         <script type="text/javascript" src="script/cartManager.js"></script>
         <script type="text/javascript" src="script/modal.js"></script>
-        
+		<script type="text/javascript" src="script/session.js"></script>
     </body>
 </html>

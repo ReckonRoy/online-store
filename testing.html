@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Testing html</title>
+		
+		<style type="text/css">
+			
+			#t_s_h
+			{
+				width: 100%;
+				padding: 0px 0px;
+			}
+			
+			#w_h_t
+			{
+				display: inline-block;
+				width: 35%;
+				height: 100px;
+				float: left;
+				margin-left: 5px;
+				line-height: 3em;
+			}
+			
+			#w_h_t p
+			{
+				margin-top: 20px;
+				font-size: 25px;
+			}
+			
+			#c_q{
+				width: 30px;
+				height: 30px;
+				border-radius: 20px;
+				background-color: orange;
+				position: absolute;
+				right: 0px;
+			}
+			
+			#i_t_h
+			{
+				display: inline-block;
+				width: 100%;
+				position: relative;
+				padding: 0;
+				margin: 0;
+				text-align: right;
+				padding: 5px 0px;
+				height: 30px;
+			}
+			
+			#cart_icon{
+				width: 90px;
+				height: 30px;
+				position: absolute;
+				padding: 0;
+				right: 50px;
+				text-align: center;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			#right-div
+			{
+				display: inline-block;
+				width: 50%;
+				float: right;
+				margin-right: 5px;
+			}
+			#login
+			{
+				width: 90px;
+				position: absolute;
+				height: 30px;
+				right: 150px;
+				margin-right: 10px;
+				text-align: center;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			#account_profile
+			{
+				width: 30px;
+				height: 30px;
+			}
+			
+			#i_b_h
+			{
+				display: inline-block;
+				width: 100%;
+				padding: 5px 0px;
+				text-align: right;
+				position: relative;
+			}
+			
+			#clr-f{
+				clear: both;
+			}
+			
+			#select_t
+			{
+				padding: 10px 10px;
+			}
+			
+			#search_btn
+			{
+				padding: 8px 8px;
+				width: 60px;
+			}
+			
+			#i_b_h input[type=text]
+			{
+				padding: 10px 10px;
+				width: 50%;
+				margin-top: 3px;
+			}
+			
+			#nav
+			{
+				clear: both;
+				width: 100%;
+				margin-top: 10px;
+				padding: 20px;
+				text-align: right;
+				background-color: #99968d;
+			}
+
+			#nav_li a{
+				color: white;
+				text-decoration: none;
+			}
+
+			#nav_li a:hover{
+				color: white;
+				font-weight: bold;
+				color: #0a5df7;
+				text-decoration: none;
+			}
+
+			#nav_li li
+			{
+				display: inline-block;
+				list-style: none;  
+				padding: 5px;
+				
+			}
+		</style>
+	</head>
+	<body>
+	
+		<div id="t_s_h">
+			<div id="w_h_t">
+				<p>Online Store: We have everything you want!</p>
+			</div>
+			<div id="right-div">
+				<div id="i_t_h"><!-- Inner Top Header -->
+					<div id="login"><img src="img/profile.png" id="account_profile">Login</div>
+					<div id="cart_icon"><img src="img/cart_icon.jpg" id="c_icon">Cart</div>
+					<div id="c_q"></div>
+				</div>
+				<div id="i_b_h"><!-- Inner Bottom Header-->
+					 <select name="type" id="select_t">
+						<option value="category">CATEGORY</option>
+						<option value="product_name">PRODUCT NAME</option>
+						
+					</select>
+					<input type="text" placeholder="Type here to search products..." name="search" id="search_t">
+					<input type="submit" value="search" id="search_btn">
+				</div>
+			</div>
+			<div id="clr-f"></div>
+			<!-- Nav -->
+			<nav id="nav">
+				<center>
+					<ul id="nav_li">
+						<li><a href="index.php">HOME</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+					</ul>
+				</center>
+			</nav>
+		</div>
+	
+	</body>
+</html>

@@ -26,7 +26,7 @@ function response_inCart()
             {
                 //var total = document.getElementById("cart_total");
                 //total.textContent = "R"+result[1];
-                var quantity = document.getElementById("cart_quantity");
+                var quantity = document.getElementById("c_i_q");
                 quantity.textContent = result[2];
                 
                 
@@ -34,7 +34,7 @@ function response_inCart()
             {
                 var total = document.getElementById("cart_total");
                 total.textContent = "R"+result[1];
-                var quantity = document.getElementById("cart_quantity");
+                var quantity = document.getElementById("c_i_q");
                 quantity.textContent = result[2];
                 //alert(result[3]);
             }

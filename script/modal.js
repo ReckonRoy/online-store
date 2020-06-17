@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 var bool = true;
-//get profile_img
-var modal_pic = document.getElementById('profile_pic');
 //get account_det div
 var account_det = document.getElementById("account_det");
 
@@ -25,22 +23,4 @@ function openRegisterModal()
     registerForm.style.display = 'block';
     
  }
- //********************************************************************************************
-modal_pic.onclick = function()
-{
-    
-    if(bool == true){
-        openModal();
-        bool = false;
-    }else if(bool == false)
-    {
-        account_det.style.display = 'none';
-        bool = true;
-    }
-}; 
-
-//function to open our modal
-function openModal()
-{
-    account_det.style.display = 'block';
-}
+ //*****************************************************************************************
