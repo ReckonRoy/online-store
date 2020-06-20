@@ -9,7 +9,7 @@
     </head>
     <body>
 <!-- This aside contains product related content i.e, view cart, empty cart, checkout products in cart, delete cart-->
-            <div class="aside">
+            <center><div class="aside">
                 <?php
                 if(!isset($_SESSION['name'])){
                 ?>
@@ -83,8 +83,9 @@
             
         </form>
         </div>
+        </center>
         <!---------------------------------Close register modal--------------------------------->
             <script type="text/javascript" src="script/modal.js"></script>
-        </div>
+       
 	</body>
 </html>

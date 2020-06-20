@@ -71,6 +71,7 @@ and open the template in the editor.
 
 #form input[type=submit]
 {
+    width: 150px;
     padding: 5px;
     height: 30px;
 }
