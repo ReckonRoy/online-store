@@ -19,6 +19,7 @@ header, footer, nav, section, article, aside
     margin: 0;
     color: grey;
     font-family: 'Karla', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body
@@ -54,23 +55,29 @@ body
 #t_s_h
 {
 	width: 100%;
-	padding: 0px 0px;
+    padding: 0px 0px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
 }
 
 #w_h_t
 {
-	display: inline-block;
 	width: 35%;
-	height: 100px;
+	height: 120px;
 	float: left;
 	margin-left: 5px;
-	line-height: 3em;
+    line-height: 3em;
+    z-index: 7;
+    text-align: center;
+    background-image: url(../img/hero.jpg);
 }
 
 #w_h_t p
 {
 	margin-top: 20px;
-	font-size: 20px;
+    font-size: 20px;
+    color: darkorchid;
 }
 
 #t_c_header
@@ -212,7 +219,7 @@ body
 {
 	clear: both;
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 0px;
 	padding: 20px;
 	text-align: right;
 	background-color: #99968d;
@@ -243,7 +250,7 @@ body
 {
     width: 100%;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 15%;
     float: right;
 }
 .products{

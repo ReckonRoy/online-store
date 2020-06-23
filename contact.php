@@ -104,17 +104,17 @@ class Contact
                 {
                     echo "Thank you for your feedback";
                     echo "<br>";
-                    echo "You will be redirected to the home page within 2seconds";
+                    echo "You will be redirected to the home page within a few seconds";
                 }else{
                     echo "technical error! please contact web admin@ sourcecodej52@gmail.com";
                     echo "<br>";
-                    echo "You will be redirected to the home page within 2 seconds";
+                    echo "You will be redirected to the home page within a few seconds";
                 }
                 
             } else {
                 echo "Please login. ";
                 echo "<br>";
-                echo "You will be redirected to the home page within 2 seconds";
+                echo "You will be redirected to the home page within a few seconds";
             }    
         } else {
             echo "Sorry we are experiencing some technical issues";
