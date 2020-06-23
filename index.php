@@ -58,7 +58,7 @@ and open the template in the editor.
 					<ul id="nav_li">
 						<li><a href="index.php">HOME</a></li>
 						<li><a href="about.html">ABOUT</a></li>
-						<li><a href="contact.html">CONTACT</a></li>
+						<li><a href="contactpage.php">CONTACT</a></li>
 					</ul>
 				</center>
 			</nav>

@@ -16,7 +16,7 @@ and open the template in the editor.
         <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/contact.css" type="text/css">
         <link rel="stylesheet" type="text/css" href="css/contactpage.css">
-        <title>Home</title>
+        <title>Contact Us</title>
     </head>
     <body>
 <!----------------------------------------------Container Div--------------------------------------------------------------->
@@ -33,11 +33,11 @@ and open the template in the editor.
 					<div id="cart_icon"><img src="img/cart_icon.jpg" id="c_icon">Cart</div>
 					<div id="c_q"><div id="c_i_q">0</div></div>
 					
-					 <div id="account_det">
-                            <div id="logout_div"><!-- log out button goes here -->
-                                <button id="logout_btn" onclick='logout()'>LOG OUT</button>
-                            </div>
-                      </div>
+					<div id="account_det">
+                        <div id="logout_div"><!-- log out button goes here -->
+                            <button id="logout_btn" onclick='logout()'>LOG OUT</button>
+                        </div>
+                    </div>
 						
 				</div>
 				<div id="i_b_h"><!-- Inner Bottom Header-->
