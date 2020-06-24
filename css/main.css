@@ -221,12 +221,12 @@ body
 	width: 100%;
 	margin-top: 0px;
 	padding: 20px;
-	text-align: right;
-	background-color: #99968d;
+    text-align: right;
+    background-color: #f0e9e9;
 }
 
 #nav_li a{
-	color: white;
+    color: #a36b27;
 	text-decoration: none;
 }
 
