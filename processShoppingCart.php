@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,13 +12,12 @@ require_once 'login.php';
 require 'product.php';
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 
-if(isset($_POST['name'])){
-    
+   
     $productObject = new Product();
-    $productObject ->setName($_POST['name']);
+    $productObject ->setName($_SESSION['s_p']);
     $scObject = new ShoppingCart();
     $scObject ->pructuctInfo($connection, $productObject ->getProduct());
-}
+
 
 class ShoppingCart
 {
@@ -41,7 +40,7 @@ class ShoppingCart
                 
                 echo json_encode([true, $rows]);
             } else {
-                echo json_encode([false, 'product is longer available']);
+                echo json_encode([false, 'product is no longer available']);
             }
         }else{
             echo json_encode([false, 'mysql error']);

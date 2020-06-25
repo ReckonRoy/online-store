@@ -76,7 +76,7 @@ and open the template in the editor.
             <section id="section">
                 <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
 
-                <article class="products" id="products">
+                <article class="p_d_product" id="p_d_product">
 
                 </article> 
             </section>
@@ -172,13 +172,12 @@ and open the template in the editor.
 
         <!-- <script type="text/javascript" src="script/vue.js"></script> -->
         <script type="text/javascript" src="script/login.js"></script>
-        <script type="text/javascript" src="script/products.js"></script>
+        <script type="text/javascript" src="script/product_details.js"></script>
         <script type="text/javascript" src="script/logout.js"></script>
         <script type="text/javascript" src="script/cart.js"></script>
         <script type="text/javascript" src="script/in_cart.js"></script>
         <script type="text/javascript" src="script/cartManager.js"></script>
         <script type="text/javascript" src="script/modal.js"></script>
         <script type="text/javascript" src="script/session.js"></script>
-        <script type="text/javascript" src="script/to_location.js"></script>
     </body>
 </html>

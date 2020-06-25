@@ -4,8 +4,8 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 16 May 2020, 3:18:29 PM
-    Author     : le-roy
+    Created on : Jun 25, 2020, 2:57:43 PM
+    Author     : LeRoy
 */
 
 header, footer, nav, section, article, aside
@@ -51,39 +51,75 @@ body
     width: 100%;
 }
 
-/*----------------------------------HEADER SECTION-----------------------------------------------------------------------------*/
-#t_s_h
+/*----------------------------------HEADER SECTION------------------------------------------------*/
+  #t_s_h
 {
-	width: 100%;
+    width: 100%;
     padding: 0px 0px;
     position: fixed;
+    top: 0;
     z-index: 2;
     background-color: white;
-    top: 0;
-}
-
-#w_h_t
-{
-	width: 35%;
-	height: 120px;
-	float: left;
-	margin-left: 5px;
-    line-height: 3em;
-    z-index: 7;
-    text-align: center;
-    background-image: url(../img/hero.jpg);
-}
-
-#w_h_t p
-{
-	margin-top: 20px;
-    font-size: 20px;
-    color: darkorchid;
 }
 
 #t_c_header
 {
-	font-size: 25px;
+    font-size: 25px;
+}
+
+
+#c_i_q
+{
+    margin-top: 5px;
+    color: white;
+}
+
+#right-div
+{
+    display: block;
+    width: 100%;
+    margin-right: 5px;
+}
+
+#i_t_h
+{
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    padding: 5px 0px;
+    height: 40px;
+}
+
+#login
+{
+    width: 100px;
+    position: absolute;
+    height: 30px;
+    right: 0px;
+    top: 0px;
+    margin-right: 0px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#account_profile
+{
+    border-radius: 50px;
+}
+#cart_icon{
+    width: 90px;
+    height: 30px;
+    position: absolute;
+    padding: 0;
+    right: 150px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    top: 10px;
 }
 
 #c_q{
@@ -92,82 +128,35 @@ body
 	border-radius: 20px;
 	background-color: orange;
 	position: absolute;
-	right: 0px;
-	
+	right: 120px;
+	top: 10px;
 	text-align: center;
-}
-
-#c_i_q
-{
-	margin-top: 5px;
-	color: white;
-}
-
-#i_t_h
-{
-	display: inline-block;
-	width: 100%;
-	position: relative;
-	padding: 0;
-	margin: 0;
-	text-align: right;
-	padding: 5px 0px;
-	height: 30px;
-}
-
-#cart_icon{
-	width: 90px;
-	height: 30px;
-	position: absolute;
-	padding: 0;
-	right: 50px;
-	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
-}
-#right-div
-{
-	display: inline-block;
-	width: 50%;
-	float: right;
-	margin-right: 5px;
-}
-#login
-{
-	width: 100px;
-	position: absolute;
-	height: 30px;
-	right: 150px;
-	margin-right: 10px;
-	text-align: center;
-	font-size: 18px;
-	font-weight: bold;
-	cursor: pointer;
 }
 
 #account_det
 {
-	display: none;
-	position: absolute;
-	border: 1px solid ghostwhite;
-	box-shadow: 1px 1px #d4d0cf;
-	border-radius: 10px;
-	width: 100px;
-	right: 180px;
-	top: 40px;
-	background-color: white;
+    display: none;
+    position: absolute;
+    border: 1px solid ghostwhite;
+    box-shadow: 1px 1px #d4d0cf;
+    border-radius: 10px;
+    width: 100px;
+    right: 180px;
+    top: 40px;
+    background-color: white;
     height: 100px;
-	z-index: 5;
+    z-index: 5;
 }
+
 #logout_btn
 {
     width: 100%;
     padding: 10px 10px;
     background-color: orangered;
     border: white;
-	margin-top: 2px;
+    margin-top: 2px;
     color: white;
-	opacity: 0.6;
+    opacity: 0.6;
 }
 
 #logout_btn:hover
@@ -177,54 +166,48 @@ body
     border: 1px solid orange;
     cursor: pointer;
     color: white;
-	opacity: 1;
+    opacity: 1;
 }
-#account_profile
-{
-	width: 30px;
-	height: 30px;
-}
-
+/*----------------------------Product search div-------------------------------------------*/
 #i_b_h
 {
-	display: inline-block;
-	width: 100%;
-	padding: 5px 0px;
-	text-align: right;
-	position: relative;
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    text-align: right;
+    position: relative;
+    text-align: center;
 }
 
 #clr-f{
-	clear: both;
+    clear: both;
 }
 
 #select_t
 {
-	padding: 10px 10px;
+    padding: 10px 10px;
 }
 
 #search_btn
 {
-	padding: 8px 8px;
-	width: 60px;
+    padding: 8px 8px;
+    width: 60px;
 }
 
 #i_b_h input[type=text]
 {
-	padding: 10px 10px;
-	width: 50%;
-	margin-top: 3px;
+    padding: 10px 10px;
+    width: 50%;
+    margin-top: 3px;
 }
-			
+/*---------------------------------------------------------------------------*/
 #nav
 {
-	clear: both;
-	width: 100%;
-	margin-top: 0px;
-	padding: 20px;
+    width: 100%;
+    margin-top: 0px;
+    padding: 20px;
     text-align: right;
-    
-	background-color: #f0e9e9;
+    background-color: #f0e9e9;
 }
 
 #nav_li a{
@@ -246,14 +229,15 @@ body
 	padding: 5px;
 	
 }
-/*---------------------------------------------------------------------------------------------------*/
+/*---------------------------------------End Header Styling------------------------*/
 
 /*--------------------------------Section Section----------------------------------------------------*/
 #section
 {
     height: 500px;
     width: 80%;
-    margin: 250px auto;
+    margin: 0px auto;
+    margin-top: 250px;
 }
 
 .s_h
@@ -275,7 +259,7 @@ body
 }
 #g_m
 {
-    width: 400px;
+    width: 350px;
     height: 350px;
 }
 .a_h

@@ -30,12 +30,12 @@ function response_session()
                 //total.textContent = "R"+result[1];
 				
                 session_content(result[1], acc_log_txt);
-				bool = result[0];
+				session_bool = result[0];
                 
             }else
             {
 				session_content(result[1], acc_log_txt);
-				bool = result[0];
+				session_bool = result[0];
             }
         }
     }
@@ -43,11 +43,11 @@ function response_session()
 
 function login()
 {
-	if(bool == true){
+	if(session_bool == true){
 		
 		if(bool_modal == true){
-			account_det.style.display = 'block';
-			bool_modal = false;
+                    account_det.style.display = 'block';
+                    bool_modal = false;
 		}else if(bool_modal == false)
 		{
 			account_det.style.display = 'none';

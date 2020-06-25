@@ -1,3 +1,13 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 25, 2020, 1:02:03 PM
+    Author     : LeRoy
+*/
+
 #comment_msg_div
 {
     margin-left: 2%;
@@ -8,7 +18,7 @@
 
 .contact_form
 {
-    width: 48.5%;
+    width: 100%;
     background-color: #c99e59;
     padding-top: 20px;
     display: inline-block;
@@ -16,22 +26,24 @@
 
 #name_c_div
 {
-    width: 45%;
-    display: inline-block;
+    width: 95%;
+    display: block;
     margin-left: 2%;
     margin-bottom: 3%;
 }
 
 #email_c_div
 {
-    width: 45%;
-    display: inline-block;
-    margin-left: 5%;
+    width: 95%;
+    display: block;
+    margin-left: 2%;
+    margin-bottom: 3%;
 }
 
 #address_c_div
 {
     width: 95%;
+    display: block;
     margin-left: 2%;
     margin-bottom: 3%;
 }
@@ -59,7 +71,7 @@
 
 #address_c_field
 {
-    width: 95%;
+    width: 90%;
     padding: 10px;
     height: 20px;
 }
@@ -77,7 +89,7 @@
 }
 
 #txt_area{
-    width: 95%;
+    width: 90%;
     padding: 10px;
     height: 200px;
 }
