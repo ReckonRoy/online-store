@@ -38,9 +38,9 @@ class AddCart
         $query = "INSERT INTO cart (username, product, quantity, price, image) VALUES('".$username."', '".$pr_n."', '".$pr_q."', '".$pr_p."', '".$pr_i."')";
         $result = $conn -> query($query);
         if($result)
-        {            echo json_encode([true, "Item added to cart"]);
+        {            
+			echo json_encode([true, "Item added to cart"]);
  
-            $result->close();
         }else{
             echo json_encode([false, "Technical error please try again later"]);
         }

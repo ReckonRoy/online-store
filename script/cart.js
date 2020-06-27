@@ -10,7 +10,7 @@ var xhr = new XMLHttpRequest();
 function request_cart(name, quantity, price, image)
 {
    xhr.onreadystatechange = response_cart;
-   var url = 'addCart.php';
+   var url = './addCart.php';
    xhr.open('POST', url, true);
    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
    xhr.send('pr_n='+name+'&pr_q='+quantity+'&pr_p='+price+'&pr_i='+image);

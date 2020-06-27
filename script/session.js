@@ -6,11 +6,12 @@
 var acc_log_txt = document.getElementById('acc_log_txt');
 var ajax_session = new XMLHttpRequest(); 
 const url = "./user_login.php";
-let session_bool = false;
+let sn_bool = false;
 let bool_modal = false;
 function request_session()
 {
-    var url = "session.php";
+	
+    var url = "./session.php";
     ajax_session.onreadystatechange = response_session;
     ajax_session.open('POST', url, true);
     ajax_session.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -28,14 +29,15 @@ function response_session()
             {
                 //var total = document.getElementById("cart_total");
                 //total.textContent = "R"+result[1];
-				
+				sn_bool = result[0];
                 session_content(result[1], acc_log_txt);
-				session_bool = result[0];
+				
                 
             }else
             {
+				sn_bool = result[0];
 				session_content(result[1], acc_log_txt);
-				session_bool = result[0];
+				
             }
         }
     }
@@ -43,7 +45,8 @@ function response_session()
 
 function login()
 {
-	if(session_bool == true){
+	
+	if(sn_bool == true){
 		
 		if(bool_modal == true){
                     account_det.style.display = 'block';
@@ -67,6 +70,5 @@ function session_content(text, element)
 	element.textContent = text;
 }
 
-
-
 request_session();
+
