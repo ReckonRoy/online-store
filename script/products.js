@@ -53,7 +53,7 @@ function response()
                 }
             }else
             {
-                var error_msg = result[1];
+                alert(result[1]);
             }
         }
     }

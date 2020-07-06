@@ -11,7 +11,7 @@ session_start();
  *
  * @author le-roy
  */
-require_once 'login.php';
+require_once 'config/login.php';
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 
 if(isset($_POST['username']) && isset($_POST['password']))

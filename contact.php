@@ -12,7 +12,7 @@ session_start();
  * @author le-roy
  */
 require 'sanitizeInput.php';
-require_once 'login.php';
+require_once 'config/login.php';
 
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 $sanitizeObject = new SanitizeInput();

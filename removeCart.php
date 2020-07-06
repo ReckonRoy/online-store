@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'login.php';
+require_once 'config/login.php';
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 
 if($connection -> connect_error)

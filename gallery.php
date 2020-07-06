@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -21,6 +17,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="css/mobile_main.css" media="(max-width: 414px) and (min-width: 100px)" type="text/css">
         <link rel="stylesheet" href="css/tablet_main.css" media="(max-width: 890px) and (min-width: 414px)" type="text/css">
         <link rel="stylesheet" type="text/css" href="css/main.css" media="(max-width: 1440px) and (min-width: 890px)">
+		<link rel="stylesheet" type="text/css" href="css/gallery.css" media="(max-width: 1440px) and (min-width: 890px)">
         <title>Home</title>
     </head>
     <body>
@@ -73,70 +70,41 @@ and open the template in the editor.
                 </nav>
             </div>
             <!----------------------------------------------End header section----------------------------------------------------------->
-            <!----------------------------------------------Section section ------------------------------------------------------------->
-            <section id="section">
-                <!-- This article uses grid layout this is where the products are displayed. for this section we make use of vue.js-->
-				<div id="prs_h"><span id="prs_h_header"><center>Shop With Us! <span id="prs_h_f">Featured Products</span></center></span>
-                <article class="products" id="products">
-
+			<!----------------------------------------------START SECTION---------------------------------------------------------------->
+			<section>
+				<div id="p_f_div"><span id="p_f_h"><center>Products Photo Gallery</center></span>
+				<article class="p_f_g" id="p_f_g">
+					<div class="p_i_g"><img src="img/car.jpeg"></div>
+					<div class="p_i_g"><img src="img/car2.jpg"></div>
+					<div class="p_i_g"><img src="img/car3.jpg"></div>
+					<div class="p_i_g"><img src="img/car4.jpg"></div>
+					<div class="p_i_g"><img src="img/car5.jpg"></div>
+					<div class="p_i_g"><img src="img/kettle.jpg"></div>
+					<div class="p_i_g"><img src="img/kettle2.jpg"></div>
+					<div class="p_i_g"><img src="img/kettle3.jpg"></div>
+					<div class="p_i_g"><img src="img/kettle4.jpg"></div>
+					<div class="p_i_g"><img src="img/lamp.jpg"></div>
+					<div class="p_i_g"><img src="img/lamp3.jpg"></div>
+					<div class="p_i_g"><img src="img/lamp4.jpg"></div>
+					<div class="p_i_g"><img src="img/plasma.png"></div>
+					<div class="p_i_g"><img src="img/plasma.jpg"></div>
+					<div class="p_i_g"><img src="img/plasma2.jpg"></div>
+					<div class="p_i_g"><img src="img/samsung tv model 2x.jpg"></div>
+					<div class="p_i_g"><img src="img/smarttv.jpg"></div>
+					<div class="p_i_g"><img src="img/smarttv2.jpg"></div>
+					<div class="p_i_g"><img src="img/stove2.jpg"></div>
+					<div class="p_i_g"><img src="img/stove3.jpg"></div>
+					<div class="p_i_g"><img src="img/toaster.jpg"></div>
+					<div class="p_i_g"><img src="img/toaster2.jpg"></div>
+					<div class="p_i_g"><img src="img/twin lamps.jpg"></div>
+					<div class="p_i_g"><img src="img/watch 4.jpg"></div>
+					<div class="p_i_g"><img src="img/watch.jpg"></div>
+					<div class="p_i_g"><img src="img/watch2.jpg"></div>
+					<div class="p_i_g"><img src="img/watch3.jpg"></div>
                 </article> 
-				</div>
-            </section>
-            <!---------------------------------------------End section ------------------------------------------------------------------->
-
-
-            <div class="clrf"></div>
-
-            <!---------------------------------register modal--------------------------------->
-            <div id="form">
-                <span class="closeBtn">&times;</span>
-                <form method="POST" action="register.php">
-
-                    <div class="field">
-                        <label>Name</label>
-                        <br>
-                        <input type="text" name="name">
-                    </div>
-
-                    <div class="field">
-                        <label>Surname</label>
-                        <br>
-                        <input type="text" name="surname">
-                    </div>
-
-
-                    <div>
-                        <div class="field">
-                            <label>Username</label>
-                            <br>
-                            <input type="text" name="username">
-                        </div>
-
-                        <div class="field">
-                            <label>password</label>
-                            <br>
-                            <input type="password" name="password">
-                        </div>
-                    </div>
-                    <div id="email_field">
-                        <label>Email</label>
-                        <br>
-                        <input type="email" name="email">
-                    </div>
-
-                    <div id="gender_div">
-                        <label>Gender</label>
-                        <br>
-                        <input type="radio" name="gender" value="female">female
-                        <input type="radio" name="gender" value="male">male
-                    </div>
-
-                    <div id="btn_div"><input type="submit" value="REGISTER NOW"></div>
-
-                </form>
-            </div>
-            <!---------------------------------Close register modal--------------------------------->
-            <footer>
+			</section>
+			<!----------------------------------------------END SECTION---------------------------------------------------------------->
+			<footer>
 
                 <div id="f-b-div"><!-- footer content bottom div-->
                     <div id="r_c_div"><!-- footer bottom right content div -->

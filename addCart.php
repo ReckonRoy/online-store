@@ -5,7 +5,7 @@ session_start();
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-require_once 'login.php';
+require_once 'config/login.php';
 
 
 if(isset($_POST['pr_n']) && isset($_POST['pr_q']) && isset($_POST['pr_p']) && isset($_POST['pr_i']))

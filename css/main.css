@@ -13,13 +13,15 @@ header, footer, nav, section, article, aside
     display: block;
 }
 
-*
-{
-    padding: 0;
-    margin: 0;
-    color: grey;
-    font-family: 'Karla', sans-serif;
-    scroll-behavior: smooth;
+html{
+	scroll-behavior: smooth;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	color: grey;
+	font-family: 'Karla', sans-serif;
 }
 
 body
@@ -54,6 +56,7 @@ body
 /*----------------------------------HEADER SECTION-----------------------------------------------------------------------------*/
 #t_s_h
 {
+	top: 0;
     width: 100%;
     padding: 0px 0px;
     position: fixed;
@@ -254,8 +257,9 @@ body
     float: right;
 }
 .products{
-    width: 70%;
+    width: 100%;
     margin: 0px auto;
+	margin-top: 40px;
     display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-column-gap: 1em;
@@ -264,12 +268,36 @@ body
 .product
 {
     padding: 10px 10px;
+	border: 1px solid w;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#prs_h
+{
+	width: 80%;
+	padding: 16px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+	margin: 0px auto;
+	margin-top: 15px;
+	margin-bottom: 30px; 
+}
+#prs_h_header
+{
+	font-size: 20px;
+	font-weight: bolder;
+	color: grey;
+}
+/*
+#prs_h_f
+{
+	color: #07c8eb;
+}
+*/
 .p_d_product{
     width: 70%;
     margin: 0px auto;
     display: grid;
+	
     grid-template-columns: 100%;
     grid-column-gap: 1em;
     grid-row-gap: 1em;
@@ -483,6 +511,7 @@ body
 /*********************************** Style section for footer*************************************/
 footer
 {
+	margin-top: 40px;
     background-color: #262625;
     width: 100%;
 }

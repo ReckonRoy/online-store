@@ -8,30 +8,76 @@ and open the template in the editor.
     <head>
         <title>About Us</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/contact.css" media="(max-width: 1440px) and (min-width: 414px)"type="text/css">
+        <link rel="stylesheet" href="css/contact_mobile.css" media="(max-width: 414px) and (min-width: 100px)"type="text/css">
+        <link rel="stylesheet" href="css/mobile_about.css" media="(max-width: 414px) and (min-width: 100px)" type="text/css">
+        <link rel="stylesheet" href="css/tablet_about.css" media="(max-width: 890px) and (min-width: 414px)" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/about1440.css" media="(max-width: 1440px) and (min-width: 890px)">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        
         <link rel="stylesheet" type="text/css" href="css/about.css">
     </head>
     <body>
 <!----------------------------------------------Container Div--------------------------------------------------------------->
         <div id="container">
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
             <!-- header section-->
-            <header id="header">
+            <div id="t_s_h">
+                <div id="right-div">
+                    <div id="i_t_h"><!-- Inner Top Header -->
+                        <div id="login" id="login_div" onclick="login()"><img src="img/profile.png" id="account_profile"></div>
+                        <div id="cart_icon"><img src="img/cart_icon.jpg" id="c_icon">Cart</div>
+                        <div id="c_q"><div id="c_i_q">0</div></div>
+
+                        <div id="account_det">
+                            <div id="logout_div"><!-- log out button goes here -->
+                                <button id="logout_btn" onclick='logout()'>LOG OUT</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="i_b_h"><!-- Inner Bottom Header-->
+                        <form action="search.php" method="post">
+                        <select name="type" id="select_t">
+                            <option value="category">CATEGORY</option>
+                            <option value="product_name">PRODUCT NAME</option>
+
+                        </select>
+                        <input type="text" placeholder="Type here to search products..." name="search" id="search_t">
+                        <input type="submit" value="search" id="search_btn">
+                        </form>
+                    </div>
+                </div>
+                <div id="clr-f"></div>
                 <!-- Nav -->
-                <nav id="nav"><center>
-                    <ul id="nav_li">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </center>
+                <nav id="nav" class="nav">
+                    <center>
+                        <ul id="nav_li">
+                            <li><a href="index.php">HOME</a></li>
+							<li><a href="gallery.php">GALLERY</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contactpage.php">CONTACT</a></li>
+                        </ul>
+                    </center>
+
+                    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </nav>
-            </header>
-<!----------------------------------------------End header section----------------------------------------------------------->
+            </div>
+            <!----------------------------------------------End header section----------------------------------------------------------->
 <!----------------------------------------------Section section ------------------------------------------------------------->
             <section id="section">
                 <div id="t_h">Meet Our Team</div>
                 <div id="team_a_div">
                     <div id="des_dev">Designers And Developers</div>
-                    <img src="img/team_pic_a.jpg" class="align-left medium" alt="web developer leroy">
+                    <div class="s_p_i"><img src="img/team_pic_a.jpg" style="width:100%" alt="web developer leroy"></div>
                     <p>Le-Roy Studied full stack web-development at the Code Space institution
                     <br>He is the lead developer for this project.</p>
                 <div id="clrf"></div>
@@ -39,7 +85,7 @@ and open the template in the editor.
                 <hr id="h-rule">
                 <div id="team_a_div">
                     <div id="acc_dir">Accountants And Directors</div>
-                    <img src="img/team_accountant.jpg" class="align-left medium" alt="web developer leroy">
+                    <div class="s_p_i"><img src="img/team_accountant.jpg" style="width:100%" alt="web developer leroy"></div>
                     <p>Le-Roy Studied full stack web-development at the Code Space institution
                     <br>He is the lead developer for this project.</p>
                 <div id="clrf"></div>

@@ -24,54 +24,20 @@ body
     padding: 0;
     margin: 0;
     color: #99968d;
-    background-color: #e3e2de;
+    background-color: white;
 }
 
 #container
 {
-    border: 1px solid black;
+    
     width: 100%;
 }
-/*HEADER SECTION---------------------------------------------------------------------------------------------------------------------*/
-#content
-{
-    width: 100%;
-    border: 1px solid orange;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-#nav
-{
-    clear: both;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    padding: 10px 0px;
-    font-size: 20px;
-}
 
-#nav_li li
-{
-    display: inline-block;
-    list-style: none;  
-    padding: 5px;
-}
-
-a{
-    text-decoration: none;
-    color: #262318;
-}
-
-a:hover
-{
-    color: #a36b27;
-}
 
 #h-rule
 {
     margin: 20px 0px;
 }
-/*--------------------------------End Header Section---------------------------------------------------------------------------*/
 
 /*--------------------------------Section css ---------------------------------------------------------------------------------*/
 #section
@@ -79,7 +45,8 @@ a:hover
     width: 70%;
     margin: 0px auto;
     background-color: white;
-    margin-top: 12%;
+    margin-top: 17%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #t_h
 {
@@ -117,12 +84,23 @@ p
     margin-bottom: 5px;
     
 }
-img
+#section img
 {   width: 500px;
     height: 333px;
     display: block;
     margin-right: 10px;
     float: left;
+}
+.s_p_i
+{
+	width: 60%;
+	display: inline-block;
+	border: 1px solid black;
+	float: left;
+}
+.s_p_image
+{
+	width: 400px;
 }
 
 #clrf

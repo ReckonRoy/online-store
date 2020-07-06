@@ -8,7 +8,7 @@ session_start();
 
 //Process shopping cart is invoked when the user has decided to check out the items
 
-require_once 'login.php';
+require_once 'config/login.php';
 require 'product.php';
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 

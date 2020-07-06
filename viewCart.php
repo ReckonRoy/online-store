@@ -6,7 +6,7 @@ session_start();
  * and open the template in the editor.
  */
 
-require_once 'login.php';
+require_once 'config/login.php';
 
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 

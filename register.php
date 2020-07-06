@@ -13,7 +13,7 @@
  */
 require 'client.php';
 require 'sanitizeInput.php';
-require 'login.php';
+require 'config/login.php';
 
 $connection = new mysqli($db_hostname, $db_username, $db_password, $db_database);
 $sanitizeObject = new SanitizeInput();
