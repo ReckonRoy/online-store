@@ -1,0 +1,286 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16 May 2020, 3:18:29 PM
+    Author     : le-roy
+*/
+
+header, footer, nav, section, article, aside
+{
+    display: block;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	color: grey;
+	font-family: 'Karla', sans-serif;
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+#container
+{
+    width: 100%;
+}
+
+/*----------------------------------HEADER SECTION-----------------------------------------------------------------------------*/
+#t_s_h
+{
+	top: 0;
+    width: 100%;
+    padding: 0px 0px;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+}
+
+#w_h_t
+{
+	width: 35%;
+	height: 120px;
+	float: left;
+	margin-left: 5px;
+    line-height: 3em;
+    z-index: 7;
+    text-align: center;
+    background-image: url(../img/hero.jpg);
+}
+
+#w_h_t p
+{
+	margin-top: 20px;
+    font-size: 20px;
+    color: darkorchid;
+}
+
+#t_c_header
+{
+	font-size: 25px;
+}
+
+#c_q{
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: orange;
+	position: absolute;
+	right: 0px;
+	
+	text-align: center;
+}
+
+#c_i_q
+{
+	margin-top: 5px;
+	color: white;
+}
+
+#i_t_h
+{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+	padding: 5px 0px;
+	height: 30px;
+}
+
+#cart_icon{
+	width: 90px;
+	height: 30px;
+	position: absolute;
+	padding: 0;
+	right: 50px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+#right-div
+{
+	display: inline-block;
+	width: 50%;
+	float: right;
+	margin-right: 5px;
+}
+#login
+{
+	width: 100px;
+	position: absolute;
+	height: 30px;
+	right: 150px;
+	margin-right: 10px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#account_det
+{
+	display: none;
+	position: absolute;
+	border: 1px solid ghostwhite;
+	box-shadow: 1px 1px #d4d0cf;
+	border-radius: 10px;
+	width: 100px;
+	right: 180px;
+	top: 40px;
+	background-color: white;
+    height: 100px;
+	z-index: 5;
+}
+#logout_btn
+{
+    width: 100%;
+    padding: 10px 10px;
+    background-color: orangered;
+    border: white;
+	margin-top: 2px;
+    color: white;
+	opacity: 0.6;
+}
+
+#logout_btn:hover
+{
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid orange;
+    cursor: pointer;
+    color: white;
+	opacity: 1;
+}
+#account_profile
+{
+	width: 30px;
+	height: 30px;
+}
+
+#i_b_h
+{
+	display: inline-block;
+	width: 100%;
+	padding: 5px 0px;
+	text-align: right;
+	position: relative;
+}
+
+#clr-f{
+	clear: both;
+}
+
+#select_t
+{
+	padding: 10px 10px;
+}
+
+#search_btn
+{
+	padding: 8px 8px;
+	width: 60px;
+}
+
+#i_b_h input[type=text]
+{
+	padding: 10px 10px;
+	width: 50%;
+	margin-top: 3px;
+}
+			
+#nav
+{
+	clear: both;
+	width: 100%;
+	margin-top: 0px;
+	padding: 20px;
+    text-align: right;
+    background-color: #f0e9e9;
+}
+
+#nav_li a{
+    color: #a36b27;
+	text-decoration: none;
+}
+
+#nav_li a:hover{
+	color: white;
+	font-weight: bold;
+	color: #0a5df7;
+	text-decoration: none;
+}
+
+#nav_li li
+{
+	display: inline-block;
+	list-style: none;  
+	padding: 5px;
+	
+}
+/*********************************** Style section for footer*************************************/
+footer
+{
+	margin-top: 40px;
+    background-color: #262625;
+    width: 100%;
+}
+
+#f-b-div
+{
+    width: 97%;
+    margin: 0 auto;
+    padding: 5px 5px;
+}
+#r_c_div
+{
+    width: 48.5%;
+    display: inline-block;
+    float: left;
+    
+}
+
+#r_c_div li
+{
+    list-style: none;
+}
+
+#r_c_div a
+{
+    text-decoration: none;
+}
+
+#r_c_div a:hover
+{
+    color: white;
+}
+

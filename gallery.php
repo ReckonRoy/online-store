@@ -14,10 +14,10 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/register.css">
         <link rel="stylesheet" href="css/contact.css" media="(max-width: 1440px) and (min-width: 414px)"type="text/css">
         <link rel="stylesheet" href="css/contact_mobile.css" media="(max-width: 414px) and (min-width: 100px)"type="text/css">
-        <link rel="stylesheet" href="css/mobile_main.css" media="(max-width: 414px) and (min-width: 100px)" type="text/css">
-        <link rel="stylesheet" href="css/tablet_main.css" media="(max-width: 890px) and (min-width: 414px)" type="text/css">
-        <link rel="stylesheet" type="text/css" href="css/main.css" media="(max-width: 1440px) and (min-width: 890px)">
-		<link rel="stylesheet" type="text/css" href="css/gallery.css" media="(max-width: 1440px) and (min-width: 890px)">
+        <link rel="stylesheet" href="css/mobile_header.css" media="(max-width: 414px) and (min-width: 100px)" type="text/css">
+        <link rel="stylesheet" href="css/tablet_header.css" media="(max-width: 890px) and (min-width: 414px)" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/main_header.css" media="(max-width: 1440px) and (min-width: 890px)">
+		<link rel="stylesheet" type="text/css" href="css/gallery.css">
         <title>Home</title>
     </head>
     <body>
