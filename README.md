@@ -20,13 +20,15 @@ Functionality:
 ## Getting Started
 open your web browser and navigate to https://github.com/ReckonRoy/todoapp.git
 make a git pull --rebase
+
+## Technologies Used
 * **apache xampp**
 * **mysql**
 * **html5**
 * **javascript**
 * **ajax**
 
-## prerequisites
+## Prerequisites
 apache xampp is a necessity  for this app
 xampp can be downloaded at "https://www.apachefriends.org/download.html"
 in order to use this app you must have a web browser installed
