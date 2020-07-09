@@ -18,7 +18,7 @@ Functionality:
 
 
 ## Getting Started
-open your web browser and navigate to https://github.com/ReckonRoy/todoapp.git
+open your web browser and navigate to https://github.com/ReckonRoy/online-store.git
 make a git pull --rebase
 
 ## Technologies Used
