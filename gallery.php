@@ -4,7 +4,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
@@ -74,33 +73,33 @@ and open the template in the editor.
 			<section>
 				<div id="p_f_div"><span id="p_f_h"><center>Products Photo Gallery</center></span>
 				<article class="p_f_g" id="p_f_g">
-					<div class="p_i_g"><img src="img/car.jpeg"></div>
-					<div class="p_i_g"><img src="img/car2.jpg"></div>
-					<div class="p_i_g"><img src="img/car3.jpg"></div>
-					<div class="p_i_g"><img src="img/car4.jpg"></div>
-					<div class="p_i_g"><img src="img/car5.jpg"></div>
-					<div class="p_i_g"><img src="img/kettle.jpg"></div>
-					<div class="p_i_g"><img src="img/kettle2.jpg"></div>
-					<div class="p_i_g"><img src="img/kettle3.jpg"></div>
-					<div class="p_i_g"><img src="img/kettle4.jpg"></div>
-					<div class="p_i_g"><img src="img/lamp.jpg"></div>
-					<div class="p_i_g"><img src="img/lamp3.jpg"></div>
-					<div class="p_i_g"><img src="img/lamp4.jpg"></div>
-					<div class="p_i_g"><img src="img/plasma.png"></div>
-					<div class="p_i_g"><img src="img/plasma.jpg"></div>
-					<div class="p_i_g"><img src="img/plasma2.jpg"></div>
-					<div class="p_i_g"><img src="img/samsung tv model 2x.jpg"></div>
-					<div class="p_i_g"><img src="img/smarttv.jpg"></div>
-					<div class="p_i_g"><img src="img/smarttv2.jpg"></div>
-					<div class="p_i_g"><img src="img/stove2.jpg"></div>
-					<div class="p_i_g"><img src="img/stove3.jpg"></div>
-					<div class="p_i_g"><img src="img/toaster.jpg"></div>
-					<div class="p_i_g"><img src="img/toaster2.jpg"></div>
-					<div class="p_i_g"><img src="img/twin lamps.jpg"></div>
-					<div class="p_i_g"><img src="img/watch 4.jpg"></div>
-					<div class="p_i_g"><img src="img/watch.jpg"></div>
-					<div class="p_i_g"><img src="img/watch2.jpg"></div>
-					<div class="p_i_g"><img src="img/watch3.jpg"></div>
+					<div class="p_i_g"><a href="img/car.jpeg"><img src="img/car.jpeg"></a></div>
+					<div class="p_i_g"><a href="img/car2.jpg"><img src="img/car2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/car3.jpg"><img src="img/car3.jpg"></a></div>
+					<div class="p_i_g"><a href="img/car4.jpg"><img src="img/car4.jpg"></a></div>
+					<div class="p_i_g"><a href="img/car5.jpg"><img src="img/car5.jpg"></a></div>
+					<div class="p_i_g"><a href="img/kettle.jpg"><img src="img/kettle.jpg"></a></div>
+					<div class="p_i_g"><a href="img/kettle2.jpg"><img src="img/kettle2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/kettle3.jpg"><img src="img/kettle3.jpg"></a></div>
+					<div class="p_i_g"><a href="img/kettle4.jpg"><img src="img/kettle4.jpg"></a></div>
+					<div class="p_i_g"><a href="img/lamp.jpg"><img src="img/lamp.jpg"></a></div>
+					<div class="p_i_g"><a href="img/lamp3.jpg"><img src="img/lamp3.jpg"></a></div>
+					<div class="p_i_g"><a href="img/lamp4.jpg"><img src="img/lamp4.jpg"></a></div>
+					<div class="p_i_g"><a href="img/plasma.png"><img src="img/plasma.png"></a></div>
+					<div class="p_i_g"><a href="img/plasma.jpg"><img src="img/plasma.jpg"></a></div>
+					<div class="p_i_g"><a href="img/plasma2.jpg"><img src="img/plasma2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/samsung tv model 2x.jpg"><img src="img/samsung tv model 2x.jpg"></a></div>
+					<div class="p_i_g"><a href="img/smarttv.jpg"><img src="img/smarttv.jpg"></a></div>
+					<div class="p_i_g"><a href="img/smarttv2.jpg"><img src="img/smarttv2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/stove2.jpg"><img src="img/stove2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/stove3.jpg"><img src="img/stove3.jpg"></a></div>
+					<div class="p_i_g"><a href="img/toaster.jpg"><img src="img/toaster.jpg"></a></div>
+					<div class="p_i_g"><a href="img/toaster2.jpg"><img src="img/toaster2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/twin lamps.jpg"><img src="img/twin lamps.jpg"></a></div>
+					<div class="p_i_g"><a href="img/watch 4.jpg"><img src="img/watch 4.jpg"></a></div>
+					<div class="p_i_g"><a href="img/watch.jpg"><img src="img/watch.jpg"></a></div>
+					<div class="p_i_g"><a href="img/watch2.jpg"><img src="img/watch2.jpg"></a></div>
+					<div class="p_i_g"><a href="img/watch3.jpg"><img src="img/watch3.jpg"></a></div>
                 </article> 
 			</section>
 			<!----------------------------------------------END SECTION---------------------------------------------------------------->
@@ -150,5 +149,7 @@ and open the template in the editor.
         <script type="text/javascript" src="script/modal.js"></script>
         <script type="text/javascript" src="script/session.js"></script>
         <script type="text/javascript" src="script/to_location.js"></script>
-    </body>
+		<script type="text/javascript" src="script/DOMhelp.js"></script>
+		<script type="text/javascript" src="script/gallery.js"></script>
+	</body>
 </html>
